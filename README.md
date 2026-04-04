@@ -3,7 +3,7 @@
 Автоматический параллельный сборщик, дедупликатор и нормализатор прокси-ссылок из внешних источников.  
 Запускается ежедневно через **GitHub Actions** и сохраняет чистые списки в `result.txt` и `results/<protocol>.txt`.
 
-[![Daily Proxy Collector](https://github.com/YOUR_USERNAME/proxy-collector/actions/workflows/collect.yml/badge.svg)](https://github.com/YOUR_USERNAME/proxy-collector/actions/workflows/collect.yml)
+[![Daily Proxy Collector](https://github.com/LexterS999/proxy-collector/actions/workflows/collect.yml/badge.svg)](https://github.com/LexterS999/proxy-collector/actions/workflows/collect.yml)
 
 ---
 
