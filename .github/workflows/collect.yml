@@ -14,14 +14,6 @@ on:
         default: "false"
         type: boolean
 
-  # Запуск при пуше в main (обновление source.txt и т.п.)
-  push:
-    branches:
-      - main
-    paths:
-      - "source.txt"
-      - "collector.py"
-
 permissions:
   contents: write   # нужно для коммита result.txt обратно в репо
 
@@ -63,17 +55,18 @@ jobs:
             --output result.txt \
             $VERBOSE_FLAG
 
-      # ── 5. Выводим краткую статистику в лог Actions ───────────────────────
+      # ── 5. Краткая статистика в сводке Actions ────────────────────────────
       - name: 📊 Print summary
         run: |
-          echo "### Результаты сборки" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          head -20 result.txt | sed 's/^/    /' >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📡 Результаты сборки" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          head -25 result.txt >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
           TOTAL=$(grep -v '^#' result.txt | grep -c '://' || true)
-          echo "**Итого прокси:** $TOTAL" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Итого уникальных прокси:** $TOTAL" >> $GITHUB_STEP_SUMMARY
 
-      # ── 6. Коммитим обновлённый result.txt ────────────────────────────────
+      # ── 6. Коммитим обновлённые файлы обратно в репо ─────────────────────
       - name: 💾 Commit result.txt
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
