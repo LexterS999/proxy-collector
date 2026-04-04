@@ -16,13 +16,6 @@
 # ──────────────────────────────────────────────────────────────────────────────
 
 # Примеры публичных репозиториев с прокси:
-https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.txt
-https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt
-https://raw.githubusercontent.com/mheidari98/.proxy/main/all
-https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/mix
-
-# ──────────────────────────────────────────────────────────────────────────────
-# Добавляйте свои источники ниже:
-# ──────────────────────────────────────────────────────────────────────────────
-
+https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/split-by-protocols/hysteria.txt
+https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/split-by-protocols/hysteria2.txt
+https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/split-by-protocols/hy2.txt
