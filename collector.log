@@ -1,0 +1,23 @@
+2026-04-04 04:12:54,033 [INFO] ════ Proxy Collector запущен ════
+2026-04-04 04:12:54,033 [INFO] Загружено 5 источников из source.txt
+2026-04-04 04:12:54,034 [INFO] [1/5] Загружаю: https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.txt
+2026-04-04 04:12:56,806 [INFO]   ↳ Найдено прокси: 200
+2026-04-04 04:12:56,806 [INFO] [2/5] Загружаю: https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt
+2026-04-04 04:12:57,781 [INFO]   ↳ Найдено прокси: 200
+2026-04-04 04:12:57,781 [INFO] [3/5] Загружаю: https://raw.githubusercontent.com/mheidari98/.proxy/main/all
+2026-04-04 04:12:58,093 [DEBUG] Декодирован Base64-блок (3667256 → 2748720 символов)
+2026-04-04 04:12:58,241 [INFO]   ↳ Найдено прокси: 24662
+2026-04-04 04:12:58,241 [INFO] [4/5] Загружаю: https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix
+2026-04-04 04:12:58,328 [WARNING] HTTP 404 для https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix (попытка 1/3)
+2026-04-04 04:13:01,490 [WARNING] HTTP 404 для https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix (попытка 2/3)
+2026-04-04 04:13:04,532 [WARNING] HTTP 404 для https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix (попытка 3/3)
+2026-04-04 04:13:04,533 [WARNING]   ↳ Пустой ответ или ошибка, пропускаем.
+2026-04-04 04:13:04,533 [INFO] [5/5] Загружаю: https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/mix
+2026-04-04 04:13:04,622 [WARNING] HTTP 404 для https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/mix (попытка 1/3)
+2026-04-04 04:13:07,713 [WARNING] HTTP 404 для https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/mix (попытка 2/3)
+2026-04-04 04:13:10,755 [WARNING] HTTP 404 для https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/mix (попытка 3/3)
+2026-04-04 04:13:10,755 [WARNING]   ↳ Пустой ответ или ошибка, пропускаем.
+2026-04-04 04:13:10,755 [INFO] Всего извлечено (с дублями): 25062
+2026-04-04 04:13:11,566 [INFO] После дедупликации: 12276
+2026-04-04 04:13:11,752 [INFO] Результат сохранён в result.txt (12276 прокси)
+2026-04-04 04:13:11,752 [INFO] ════ Готово ════
