@@ -1,28 +1,32 @@
 #!/usr/bin/env python3
 """
-Proxy Collector v3 — сборщик, дедупликатор и нормализатор прокси.
+Proxy Collector v4 — сборщик, дедупликатор и нормализатор прокси.
 
 Поддерживает: vless://, vmess://, trojan://, ss://, ssr://,
               hy2://, hysteria://, hysteria2://, tuic://,
               naive://, brook://, juicity://, wg://, wireguard://
 
-Геолокация : ip-api.com (бесплатно, без ключа, batch-запросы по 100 хостов)
-Стандарт   : 🇺🇸 VLESS | host:port | #00001
-Дедупликация: по параметрам подключения — имена полностью игнорируются.
+Геолокация : ip-api.com (бесплатно, без ключа, до 45 req/min)
+             Умный rate-limit: читает заголовки X-Rl / X-Ttl,
+             экспоненциальный backoff при 429, фильтр приватных IP.
+Имя прокси : "🇺🇸 VLESS"  (флаг + протокол, без лишних полей)
+Результаты : result.txt (все протоколы) + results/<protocol>.txt
 """
 
 import re
 import sys
 import json
 import time
+import socket
 import base64
 import logging
 import hashlib
 import argparse
+import ipaddress
 import urllib.request
 import urllib.error
 from urllib.parse import (
-    urlparse, parse_qs, urlencode, urlunparse, unquote, quote,
+    urlparse, parse_qs, urlencode, urlunparse, unquote,
 )
 from pathlib import Path
 from datetime import datetime, timezone
@@ -30,18 +34,24 @@ from collections import defaultdict
 
 # ─── Настройки ────────────────────────────────────────────────────────────────
 
-SOURCE_FILE = "source.txt"
-RESULT_FILE = "result.txt"
-LOG_FILE    = "collector.log"
-TIMEOUT     = 20   # сек на загрузку одного источника
-MAX_RETRIES = 3
-RETRY_DELAY = 3    # сек между попытками загрузки
+SOURCE_FILE  = "source.txt"
+RESULT_FILE  = "result.txt"
+RESULTS_DIR  = "results"
+LOG_FILE     = "collector.log"
+TIMEOUT      = 20    # сек на загрузку источника
+MAX_RETRIES  = 3
+RETRY_DELAY  = 3     # сек между попытками загрузки
 
-# ip-api.com — бесплатный batch-геолокатор (без ключа, 45 req/min)
-GEO_API_URL    = "http://ip-api.com/batch"
-GEO_BATCH_SIZE = 100   # max записей на один POST-запрос
-GEO_TIMEOUT    = 10    # сек ожидания ответа геолокатора
-GEO_RATE_SLEEP = 1.5   # сек между batch-запросами (соблюдаем 45/min)
+# ip-api.com: batch POST, бесплатно, до 45 req/min без ключа
+# Документация: https://ip-api.com/docs/api:batch
+GEO_API_URL     = "http://ip-api.com/batch"
+GEO_BATCH_SIZE  = 50    # уменьшаем до 50 (запас по rate-limit)
+GEO_TIMEOUT     = 15    # сек ожидания ответа
+GEO_RATE_SLEEP  = 2.0   # базовая пауза между батчами (30 батчей/мин < 45 лимита)
+GEO_RETRY_SLEEP = 65    # сек ожидания после 429 (подождать сброс минутного окна)
+GEO_MAX_RETRY   = 3     # максимум повторов при 429
+
+# ─── Протоколы ────────────────────────────────────────────────────────────────
 
 PROXY_SCHEMES = [
     "vless", "vmess", "trojan",
@@ -51,6 +61,7 @@ PROXY_SCHEMES = [
     "wireguard", "wg",
 ]
 
+# Красивые метки протоколов для имён прокси
 SCHEME_LABEL: dict[str, str] = {
     "vless":     "VLESS",
     "vmess":     "VMESS",
@@ -68,10 +79,28 @@ SCHEME_LABEL: dict[str, str] = {
     "wg":        "WG",
 }
 
-# Параметры запроса, несущие ТОЛЬКО имя/метку — не влияют на соединение
+# Канонические имена файлов в results/ (несколько схем → один файл)
+SCHEME_FILENAME: dict[str, str] = {
+    "vless":     "vless",
+    "vmess":     "vmess",
+    "trojan":    "trojan",
+    "ss":        "ss",
+    "ssr":       "ssr",
+    "hy2":       "hy2",
+    "hysteria2": "hy2",
+    "hysteria":  "hysteria",
+    "tuic":      "tuic",
+    "naive":     "naive",
+    "brook":     "brook",
+    "juicity":   "juicity",
+    "wireguard": "wg",
+    "wg":        "wg",
+}
+
+# Параметры запроса, несущие ТОЛЬКО имя — не влияют на соединение
 _NAME_PARAMS = frozenset({"remarks", "remark", "name", "title", "label", "alias"})
 
-# Regex для извлечения прокси из произвольного текста
+# Regex для извлечения прокси из текста
 _SCHEMES_PAT = "|".join(re.escape(s) for s in PROXY_SCHEMES)
 PROXY_RE = re.compile(
     rf'(?:^|[\s"\',;`])({_SCHEMES_PAT})://([\S]+)',
@@ -98,7 +127,6 @@ def setup_logging(verbose: bool = False) -> None:
 # ─── Base64 утилиты ───────────────────────────────────────────────────────────
 
 def _b64decode(data: str) -> str:
-    """Декодирует Base64 (стандарт + URL-safe) без исключений."""
     data = data.strip().replace("\n", "").replace("\r", "")
     pad  = 4 - len(data) % 4
     if pad != 4:
@@ -112,12 +140,10 @@ def _b64decode(data: str) -> str:
 
 
 def _b64encode(text: str) -> str:
-    """Кодирует строку в Base64 URL-safe без padding."""
     return base64.urlsafe_b64encode(text.encode()).decode().rstrip("=")
 
 
 def _looks_like_b64(text: str) -> bool:
-    """True если строка похожа на Base64-блок (не прокси-URL)."""
     text = text.strip()
     return (
         len(text) >= 20
@@ -130,84 +156,146 @@ def _looks_like_b64(text: str) -> bool:
 
 def _country_flag(country_code: str) -> str:
     """
-    Конвертирует 2-буквенный код страны ISO 3166-1 в Unicode-флаг.
-
-    Флаги кодируются парой Regional Indicator Symbols (U+1F1E6..U+1F1FF).
-    На Android / современных ОС отображаются как цветные флаги.
-    На Windows (где флаги не поддерживаются) — как две заглавные буквы
-    кода страны (например US, DE, FR), что само по себе читаемо.
-    Символы являются валидным UTF-8 и не ломают ни одного клиента.
+    ISO 3166-1 alpha-2 → Unicode Regional Indicator Symbol пара (флаг).
+    Например: "US" → "🇺🇸", "DE" → "🇩🇪".
+    На Android и Linux отображается как цветной флаг.
+    На Windows (без поддержки флагов) — читаемая пара букв: US, DE, RU.
+    Для неизвестных хостов возвращает 🌐 (U+1F310).
     """
     if not country_code or len(country_code) != 2:
-        return "\U0001F310"  # 🌐 глобус для неизвестных IP
+        return "\U0001F310"
     cc = country_code.upper()
     if not cc.isalpha():
         return "\U0001F310"
     return "".join(chr(0x1F1E6 + ord(c) - ord("A")) for c in cc)
 
 
-def geolocate_hosts(hosts: list[str]) -> dict[str, str]:
+def _is_private_host(host: str) -> bool:
+    """True для приватных/зарезервированных IP и localhost — геолокация им не нужна."""
+    if not host or host in ("unknown", "localhost", ""):
+        return True
+    try:
+        addr = ipaddress.ip_address(host)
+        return addr.is_private or addr.is_loopback or addr.is_reserved or addr.is_unspecified
+    except ValueError:
+        # Домен — не приватный
+        return host.endswith((".local", ".internal", ".localhost"))
+
+
+def _geo_batch_request(batch: list[str]) -> dict[str, str]:
     """
-    Запрашивает ip-api.com/batch для списка хостов/IP.
-    Возвращает словарь {host.lower(): "US"} (2-буквенный код ISO).
-
-    ip-api.com — полностью бесплатен, не требует API-ключа.
-    Batch-лимит: 100 хостов за запрос, 45 запросов в минуту.
-    Источник: https://ip-api.com/docs/api:batch
+    Один POST-запрос к ip-api.com/batch с автоматическим backoff при 429.
+    Возвращает {host: country_code} для успешных записей.
+    Читает заголовки X-Rl (requests left) и X-Ttl (seconds to reset)
+    для точного управления паузами.
     """
-    if not hosts:
-        return {}
+    payload = json.dumps(
+        [{"query": h, "fields": "query,countryCode,status"} for h in batch]
+    ).encode("utf-8")
+    req = urllib.request.Request(
+        GEO_API_URL,
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
 
-    unique_hosts = list(dict.fromkeys(h.lower() for h in hosts if h))
-    result: dict[str, str] = {}
-
-    log.info("Геолокация: запрашиваю %d уникальных хостов...", len(unique_hosts))
-
-    for i in range(0, len(unique_hosts), GEO_BATCH_SIZE):
-        batch   = unique_hosts[i : i + GEO_BATCH_SIZE]
-        payload = json.dumps(
-            [{"query": h, "fields": "query,countryCode,status"} for h in batch]
-        ).encode("utf-8")
-
-        req = urllib.request.Request(
-            GEO_API_URL,
-            data=payload,
-            headers={"Content-Type": "application/json"},
-            method="POST",
-        )
+    for attempt in range(1, GEO_MAX_RETRY + 1):
         try:
             with urllib.request.urlopen(req, timeout=GEO_TIMEOUT) as resp:
+                # Читаем X-Rl / X-Ttl для точного rate-limit контроля
+                rl  = resp.headers.get("X-Rl",  "")
+                ttl = resp.headers.get("X-Ttl", "")
+                try:
+                    remaining = int(rl)
+                    if remaining <= 2:
+                        # Почти достигли лимита — ждём сброс окна
+                        wait = max(int(ttl) if ttl else GEO_RETRY_SLEEP, 5)
+                        log.info("Rate-limit: осталось %d req, жду %d сек...", remaining, wait)
+                        time.sleep(wait)
+                except (ValueError, TypeError):
+                    pass
+
+                result: dict[str, str] = {}
                 items = json.loads(resp.read().decode("utf-8"))
                 for item in items:
                     if item.get("status") == "success":
                         q  = item.get("query", "").lower()
                         cc = item.get("countryCode", "").upper()
-                        if q and cc and len(cc) == 2:
+                        if q and cc and len(cc) == 2 and cc.isalpha():
                             result[q] = cc
-        except Exception as e:
-            log.warning(
-                "Geo batch %d/%d не удался: %s",
-                i // GEO_BATCH_SIZE + 1,
-                (len(unique_hosts) + GEO_BATCH_SIZE - 1) // GEO_BATCH_SIZE,
-                e,
-            )
+                return result
 
-        # Пауза между запросами — соблюдаем лимит 45 req/min
-        if i + GEO_BATCH_SIZE < len(unique_hosts):
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                wait = GEO_RETRY_SLEEP * attempt  # экспоненциальный backoff
+                log.warning("429 Too Many Requests — жду %d сек (попытка %d/%d)...",
+                            wait, attempt, GEO_MAX_RETRY)
+                time.sleep(wait)
+            else:
+                log.warning("Geo HTTP %s, пропускаем батч: %s", e.code, e)
+                return {}
+        except Exception as e:
+            if attempt < GEO_MAX_RETRY:
+                wait = GEO_RATE_SLEEP * (2 ** attempt)
+                log.warning("Geo ошибка (%s), retry %d/%d через %.0f сек...",
+                            e, attempt, GEO_MAX_RETRY, wait)
+                time.sleep(wait)
+            else:
+                log.warning("Geo батч пропущен после %d попыток: %s", GEO_MAX_RETRY, e)
+                return {}
+
+    return {}
+
+
+def geolocate_hosts(hosts: list[str]) -> dict[str, str]:
+    """
+    Геолоцирует список хостов через ip-api.com/batch.
+    Возвращает {host.lower(): "US"}.
+
+    Оптимизации:
+    - Фильтрует приватные/loopback IP (геолокация не нужна)
+    - Дедуплицирует хосты перед запросами
+    - Управляет паузами по заголовкам X-Rl / X-Ttl
+    - Экспоненциальный backoff при 429
+    """
+    if not hosts:
+        return {}
+
+    # Фильтруем: только уникальные публичные хосты
+    public_hosts = list(dict.fromkeys(
+        h.lower() for h in hosts
+        if h and not _is_private_host(h)
+    ))
+
+    if not public_hosts:
+        log.info("Геолокация: нет публичных хостов для запроса.")
+        return {}
+
+    total_batches = (len(public_hosts) + GEO_BATCH_SIZE - 1) // GEO_BATCH_SIZE
+    log.info("Геолокация: %d уникальных хостов → %d батч(ей) по %d...",
+             len(public_hosts), total_batches, GEO_BATCH_SIZE)
+
+    result: dict[str, str] = {}
+
+    for batch_idx, i in enumerate(range(0, len(public_hosts), GEO_BATCH_SIZE), 1):
+        batch = public_hosts[i : i + GEO_BATCH_SIZE]
+        batch_result = _geo_batch_request(batch)
+        result.update(batch_result)
+        log.debug("Батч %d/%d: определено %d/%d", batch_idx, total_batches,
+                  len(batch_result), len(batch))
+
+        # Фиксированная пауза между батчами (кроме последнего)
+        if i + GEO_BATCH_SIZE < len(public_hosts):
             time.sleep(GEO_RATE_SLEEP)
 
-    found = len(result)
-    log.info(
-        "Геолокация: определено %d/%d (не определено: %d)",
-        found, len(unique_hosts), len(unique_hosts) - found,
-    )
+    log.info("Геолокация: определено %d/%d (не определено: %d)",
+             len(result), len(public_hosts), len(public_hosts) - len(result))
     return result
 
 
 # ─── Парсеры протоколов ───────────────────────────────────────────────────────
 
 def _vmess_decode(url: str) -> dict | None:
-    """vmess://BASE64 → dict. None при ошибке."""
     try:
         body = url[len("vmess://"):]
         decoded = _b64decode(body)
@@ -219,19 +307,15 @@ def _vmess_decode(url: str) -> dict | None:
 
 
 def _vmess_encode(obj: dict) -> str:
-    """dict → vmess://BASE64."""
     raw = json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
     return "vmess://" + base64.urlsafe_b64encode(raw.encode()).decode().rstrip("=")
 
 
 def _ss_components(url: str) -> tuple | None:
     """
-    Разбирает ss:// → (method, password, host, port).
-
-    Форматы:
-      ss://BASE64(method:pass)@host:port#name   ← современный
-      ss://BASE64(method:pass@host:port)#name   ← legacy
-      ss://method:pass@host:port#name           ← plain-text
+    ss:// → (method, password, host, port).
+    Поддерживает форматы: base64(method:pass)@host:port,
+    base64(method:pass@host:port), plain method:pass@host:port.
     """
     try:
         clean = url.split("#")[0].strip()
@@ -253,7 +337,6 @@ def _ss_components(url: str) -> tuple | None:
             h, _, p = hostport.rpartition(":")
             return method.strip().lower(), password.strip(), h.lower(), int(p)
 
-        # Legacy: всё тело — base64
         decoded = _b64decode(body)
         if "@" in decoded:
             creds, hostport = decoded.rsplit("@", 1)
@@ -267,26 +350,30 @@ def _ss_components(url: str) -> tuple | None:
 
 
 def _ssr_core(url: str) -> str:
-    """Извлекает ключевые параметры SSR без имени."""
     try:
         body    = url[len("ssr://"):]
         decoded = _b64decode(body)
         if not decoded:
             return url
-        core = decoded.split("/?")[0].split("#")[0]
-        return core.lower()
+        return decoded.split("/?")[0].split("#")[0].lower()
     except Exception:
         return url
 
 
 def _host_port(url: str) -> tuple:
-    """Возвращает (host, port) из любого прокси-URL."""
+    """
+    Возвращает (host, port) из любого прокси-URL.
+    Устойчив к IPv6-адресам и нестандартным портам.
+    """
     scheme = urlparse(url).scheme.lower()
 
     if scheme == "vmess":
         obj = _vmess_decode(url)
         if obj:
-            return str(obj.get("add", "unknown")).lower(), int(obj.get("port", 0))
+            try:
+                return str(obj.get("add", "unknown")).lower(), int(obj.get("port", 0))
+            except (ValueError, TypeError):
+                return str(obj.get("add", "unknown")).lower(), 0
 
     if scheme == "ss":
         comp = _ss_components(url)
@@ -299,25 +386,54 @@ def _host_port(url: str) -> tuple:
         if len(parts) >= 2:
             try:
                 return parts[0], int(parts[1])
-            except ValueError:
+            except (ValueError, IndexError):
                 pass
 
     parsed = urlparse(url)
-    return (parsed.hostname or "unknown").lower(), (parsed.port or 0)
+    host   = (parsed.hostname or "unknown").lower()
+
+    # Безопасное извлечение порта — порт может быть невалидным у некоторых
+    # источников (например IPv6 без скобок внутри netloc).
+    try:
+        port = parsed.port or 0
+    except ValueError:
+        # Fallback: парсим порт вручную из netloc
+        netloc = parsed.netloc
+        # Убираем возможный userinfo
+        if "@" in netloc:
+            netloc = netloc.rsplit("@", 1)[1]
+        # Ищем последнее ":" не внутри IPv6 []
+        if netloc.startswith("["):
+            # IPv6: [addr]:port или просто [addr]
+            bracket_end = netloc.find("]")
+            if bracket_end != -1 and bracket_end + 2 <= len(netloc):
+                try:
+                    port = int(netloc[bracket_end + 2:])
+                except ValueError:
+                    port = 0
+            else:
+                port = 0
+        else:
+            # Обычный host: берём всё после последнего ":"
+            parts = netloc.rsplit(":", 1)
+            try:
+                port = int(parts[1]) if len(parts) == 2 else 0
+            except (ValueError, IndexError):
+                port = 0
+
+    return host, (port or 0)
 
 
 # ─── Дедупликация — отпечаток соединения ─────────────────────────────────────
 
 def connection_fingerprint(url: str) -> str:
     """
-    SHA-256 от параметров ПОДКЛЮЧЕНИЯ.
-    Имя/remark/fragment полностью исключены.
-    Один и тот же сервер с разными именами → один отпечаток.
+    SHA-256 от параметров подключения. Имя/remark/fragment исключены.
+    Один сервер с разными именами → один отпечаток.
     """
     try:
         scheme = urlparse(url).scheme.lower()
 
-        # VMess: fingerprint по JSON-полям соединения
         if scheme == "vmess":
             obj = _vmess_decode(url)
             if obj:
@@ -327,20 +443,18 @@ def connection_fingerprint(url: str) -> str:
                 key = "|".join(str(obj.get(f, "")).lower() for f in fields)
                 return hashlib.sha256(f"vmess:{key}".encode()).hexdigest()
 
-        # SS: fingerprint по method + password + host + port
         if scheme == "ss":
             comp = _ss_components(url)
             if comp:
                 method, password, host, port = comp
-                key = f"ss:{method}:{password}:{host}:{port}"
-                return hashlib.sha256(key.encode()).hexdigest()
+                return hashlib.sha256(
+                    f"ss:{method}:{password}:{host}:{port}".encode()
+                ).hexdigest()
 
-        # SSR: fingerprint по ядру (без remarks/name)
         if scheme == "ssr":
             core = _ssr_core(url)
             return hashlib.sha256(f"ssr:{core}".encode()).hexdigest()
 
-        # Все остальные: netloc + path + sorted query без name-полей
         parsed = urlparse(url)
         netloc = parsed.netloc.lower()
         path   = parsed.path
@@ -360,26 +474,23 @@ def connection_fingerprint(url: str) -> str:
         return hashlib.sha256(url.encode()).hexdigest()
 
 
-# ─── Стандартное имя с флагом страны ─────────────────────────────────────────
+# ─── Стандартное имя с флагом ─────────────────────────────────────────────────
 
-def apply_standard_name(url: str, counter: int, country_code: str = "") -> str:
+def apply_standard_name(url: str, country_code: str = "") -> str:
     """
-    Заменяет имя прокси стандартным форматом:
-      'FLAG PROTOCOL | host:port | #00001'
-    Пример: '🇺🇸 VLESS | us.example.com:443 | #00001'
+    Заменяет имя прокси стандартным: "FLAG PROTOCOL"
+    Пример: "🇺🇸 VLESS"
 
-    Работает для ВСЕХ протоколов:
-      - vless/trojan/hy2/tuic/…  → URL fragment
-      - vmess                    → JSON-поле "ps" (ре-кодируется в base64)
-      - ssr                      → поле remarks в base64-теле
+    Для vmess — меняет поле ps в JSON.
+    Для ssr   — меняет remarks в base64-теле.
+    Для всех остальных — ставит в URL-фрагмент (после #).
     """
-    scheme  = urlparse(url).scheme.lower()
-    label   = SCHEME_LABEL.get(scheme, scheme.upper())
-    host, port = _host_port(url)
-    flag    = _country_flag(country_code)
-    new_name = f"{flag} {label} | {host}:{port} | #{counter:05d}"
+    scheme   = urlparse(url).scheme.lower()
+    label    = SCHEME_LABEL.get(scheme, scheme.upper())
+    flag     = _country_flag(country_code)
+    new_name = f"{flag} {label}"
 
-    # ── VMess: имя внутри JSON ──────────────────────────────────────────────
+    # ── VMess ──────────────────────────────────────────────────────────────
     if scheme == "vmess":
         obj = _vmess_decode(url)
         if obj:
@@ -387,7 +498,7 @@ def apply_standard_name(url: str, counter: int, country_code: str = "") -> str:
             return _vmess_encode(obj)
         return url
 
-    # ── SSR: имя внутри base64-тела (remarks) ──────────────────────────────
+    # ── SSR ────────────────────────────────────────────────────────────────
     if scheme == "ssr":
         body    = url[len("ssr://"):]
         decoded = _b64decode(body)
@@ -406,13 +517,13 @@ def apply_standard_name(url: str, counter: int, country_code: str = "") -> str:
             ).decode().rstrip("=")
         return url
 
-    # ── Все остальные: имя в URL-фрагменте (#…) ────────────────────────────
-    # Собираем URL вручную (без quote/urlunparse для фрагмента),
-    # чтобы флаги-эмодзи и Unicode не преобразовывались в %XX.
+    # ── Все остальные: имя в URL-фрагменте ─────────────────────────────────
+    # Строим вручную чтобы emoji-флаги не кодировались в %XX
     try:
         parsed   = urlparse(url)
         base_url = urlunparse((
-            scheme, parsed.netloc, parsed.path, parsed.params, parsed.query, "",
+            scheme, parsed.netloc, parsed.path,
+            parsed.params, parsed.query, "",
         ))
         return base_url + "#" + new_name
     except Exception:
@@ -422,7 +533,6 @@ def apply_standard_name(url: str, counter: int, country_code: str = "") -> str:
 # ─── Нормализация и валидация ─────────────────────────────────────────────────
 
 def normalize_proxy(raw: str) -> str | None:
-    """Базовая нормализация: строчная схема, валидация, чистый fragment."""
     raw = raw.strip()
     if not raw:
         return None
@@ -450,12 +560,8 @@ def normalize_proxy(raw: str) -> str | None:
     fragment = unquote(parsed.fragment).strip() if parsed.fragment else ""
     try:
         return urlunparse((
-            scheme,
-            parsed.netloc,
-            parsed.path,
-            parsed.params,
-            parsed.query,
-            fragment,
+            scheme, parsed.netloc, parsed.path,
+            parsed.params, parsed.query, fragment,
         ))
     except Exception:
         return None
@@ -464,10 +570,9 @@ def normalize_proxy(raw: str) -> str | None:
 # ─── Загрузка источников ──────────────────────────────────────────────────────
 
 def fetch_url(url: str) -> str:
-    """Загружает URL с повторными попытками."""
     req = urllib.request.Request(url, headers={
         "User-Agent": (
-            "Mozilla/5.0 (compatible; ProxyCollector/3.0; "
+            "Mozilla/5.0 (compatible; ProxyCollector/4.0; "
             "+https://github.com/your-username/proxy-collector)"
         ),
         "Accept": "text/plain, text/html, */*",
@@ -494,11 +599,6 @@ def fetch_url(url: str) -> str:
 
 
 def extract_proxies(text: str, _depth: int = 0) -> list[str]:
-    """
-    Рекурсивно извлекает прокси из текста:
-    1. Прямой regex-поиск по схемам
-    2. Декодирование Base64-блоков (subscription-формат)
-    """
     if _depth > 3:
         return []
 
@@ -513,7 +613,6 @@ def extract_proxies(text: str, _depth: int = 0) -> list[str]:
     if proxies:
         return proxies
 
-    # Весь текст — один Base64-блок
     if _looks_like_b64(text):
         decoded = _b64decode(text)
         if decoded:
@@ -522,7 +621,6 @@ def extract_proxies(text: str, _depth: int = 0) -> list[str]:
             if proxies:
                 return proxies
 
-    # Многострочный subscription: каждая строка — отдельный Base64
     for line in text.splitlines():
         line = line.strip()
         if _looks_like_b64(line):
@@ -536,7 +634,6 @@ def extract_proxies(text: str, _depth: int = 0) -> list[str]:
 
 
 def load_sources(source_file: str) -> list[str]:
-    """Читает URL из source.txt. Строки с # игнорируются."""
     path = Path(source_file)
     if not path.exists():
         log.error("Файл источников не найден: %s", source_file)
@@ -562,7 +659,6 @@ _SCHEME_ORDER = {s: i for i, s in enumerate([
 
 
 def _sort_key(item: tuple) -> tuple:
-    """Сортировка: (порядок_протокола, страна, хост, порт)."""
     proxy, country_code = item
     try:
         host, port = _host_port(proxy)
@@ -573,19 +669,39 @@ def _sort_key(item: tuple) -> tuple:
         return (99, "ZZ", "", 0)
 
 
-# ─── Статистика ───────────────────────────────────────────────────────────────
+# ─── Запись результатов ───────────────────────────────────────────────────────
 
-def build_stats(
+def _file_header(title: str, now: str, count: int) -> str:
+    w = 59
+    return "\n".join([
+        "# " + "═" * w,
+        f"#  {title}",
+        f"#  Обновлено: {now}",
+        f"#  Прокси  : {count}",
+        "# " + "═" * w,
+        "",
+    ])
+
+
+def write_results(
     proxies: list[str],
     geo_cache: dict[str, str],
+    result_file: str,
+    results_dir: str,
     sources_total: int,
     sources_ok: int,
     raw_count: int,
     dup_count: int,
-) -> str:
-    proto_counter: dict[str, int]   = defaultdict(int)
-    country_counter: dict[str, int] = defaultdict(int)
+) -> None:
+    """
+    1. result.txt  — все протоколы с полной статистикой
+    2. results/<protocol>.txt — отдельный файл на каждый протокол
+    """
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
+    # ── Статистика по протоколам и странам ────────────────────────────────
+    proto_counter:   dict[str, int] = defaultdict(int)
+    country_counter: dict[str, int] = defaultdict(int)
     for p in proxies:
         scheme = urlparse(p).scheme.lower()
         label  = SCHEME_LABEL.get(scheme, scheme.upper())
@@ -594,11 +710,10 @@ def build_stats(
         cc      = geo_cache.get(host.lower(), "")
         country_counter[cc or "??"] += 1
 
-    now   = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    w     = 59
-    lines = [
+    w = 59
+    stats_lines = [
         "# " + "═" * w,
-        "#  Proxy Collector v3 — результат сборки",
+        "#  Proxy Collector v4 — результат сборки",
         "# " + "─" * w,
         f"#  Обновлено  : {now}",
         f"#  Источников : {sources_ok}/{sources_total} успешно",
@@ -611,19 +726,49 @@ def build_stats(
     max_p = max(proto_counter.values()) if proto_counter else 1
     for label, count in sorted(proto_counter.items(), key=lambda x: -x[1]):
         bar = "█" * max(1, round(count / max_p * 24))
-        lines.append(f"#    {label:<12} {count:>5}  {bar}")
+        stats_lines.append(f"#    {label:<12} {count:>5}  {bar}")
 
-    lines.append("# " + "─" * w)
-    lines.append("#  Топ-10 стран:")
+    stats_lines.append("# " + "─" * w)
+    stats_lines.append("#  Топ-10 стран:")
     top10 = sorted(country_counter.items(), key=lambda x: -x[1])[:10]
     max_c = top10[0][1] if top10 else 1
     for cc, count in top10:
         flag = _country_flag(cc) if cc not in ("??", "") else "🌐"
         bar  = "█" * max(1, round(count / max_c * 24))
-        lines.append(f"#    {flag} {cc:<4} {count:>5}  {bar}")
+        stats_lines.append(f"#    {flag} {cc:<4} {count:>5}  {bar}")
+    stats_lines.append("# " + "═" * w)
 
-    lines.append("# " + "═" * w)
-    return "\n".join(lines)
+    # ── Запись result.txt ─────────────────────────────────────────────────
+    content = "\n".join(stats_lines) + "\n\n" + "\n".join(proxies) + "\n"
+    Path(result_file).write_text(content, encoding="utf-8")
+    log.info("Записан %s: %d прокси", result_file, len(proxies))
+
+    # ── Запись results/<protocol>.txt ─────────────────────────────────────
+    rd = Path(results_dir)
+    rd.mkdir(exist_ok=True)
+
+    # Группируем по каноническому имени файла
+    groups: dict[str, list[str]] = defaultdict(list)
+    for p in proxies:
+        scheme   = urlparse(p).scheme.lower()
+        filename = SCHEME_FILENAME.get(scheme, scheme)
+        groups[filename].append(p)
+
+    for filename, group_proxies in sorted(groups.items()):
+        fpath  = rd / f"{filename}.txt"
+        header = _file_header(
+            f"{filename.upper()} — {len(group_proxies)} прокси",
+            now,
+            len(group_proxies),
+        )
+        fpath.write_text(header + "\n".join(group_proxies) + "\n", encoding="utf-8")
+        log.info("  results/%s.txt: %d прокси", filename, len(group_proxies))
+
+    # Удаляем файлы протоколов, которых нет в текущей выборке
+    for old_file in rd.glob("*.txt"):
+        if old_file.stem not in groups:
+            old_file.unlink()
+            log.info("  Удалён устаревший %s", old_file)
 
 
 # ─── Основная логика ──────────────────────────────────────────────────────────
@@ -631,10 +776,11 @@ def build_stats(
 def run(
     source_file: str = SOURCE_FILE,
     result_file: str = RESULT_FILE,
+    results_dir: str = RESULTS_DIR,
     verbose: bool = False,
 ) -> int:
     setup_logging(verbose)
-    log.info("════ Proxy Collector v3 запущен ════")
+    log.info("════ Proxy Collector v4 запущен ════")
 
     # 1. Загрузка источников
     urls = load_sources(source_file)
@@ -679,28 +825,40 @@ def run(
     dup_count = len(normalized) - len(unique)
     log.info("После дедупликации: %d (удалено дублей: %d)", len(unique), dup_count)
 
-    # 5. Геолокация всех уникальных хостов
-    all_hosts = [_host_port(p)[0] for p in unique]
+    # 5. Безопасное извлечение хостов (с защитой от IPv6-ошибок)
+    all_hosts: list[str] = []
+    for p in unique:
+        try:
+            host, _ = _host_port(p)
+            all_hosts.append(host)
+        except Exception as e:
+            log.debug("_host_port error для %s: %s", p[:80], e)
+            all_hosts.append("unknown")
+
+    # 6. Геолокация публичных хостов
     geo_cache = geolocate_hosts(all_hosts)
 
-    # 6. Сортировка: протокол → страна → хост → порт
-    pairs = [(p, geo_cache.get(_host_port(p)[0].lower(), "")) for p in unique]
+    # 7. Сортировка: протокол → страна → хост → порт
+    pairs = [
+        (p, geo_cache.get(all_hosts[i].lower(), ""))
+        for i, p in enumerate(unique)
+    ]
     pairs.sort(key=_sort_key)
 
-    # 7. Применяем стандартные имена с флагом страны
+    # 8. Применяем стандартные имена "FLAG PROTOCOL"
     renamed: list[str] = []
-    for counter, (proxy, cc) in enumerate(pairs, start=1):
-        renamed.append(apply_standard_name(proxy, counter, cc))
+    for proxy, cc in pairs:
+        renamed.append(apply_standard_name(proxy, cc))
 
-    # 8. Запись результата
-    geo_cache_for_stats = {
-        _host_port(p)[0].lower(): cc for p, cc in pairs
-    }
-    stats   = build_stats(renamed, geo_cache, len(urls), sources_ok, raw_count, dup_count)
-    content = stats + "\n\n" + "\n".join(renamed) + "\n"
-    Path(result_file).write_text(content, encoding="utf-8")
+    # 9. Запись всех файлов
+    geo_final = {all_hosts[i].lower(): geo_cache.get(all_hosts[i].lower(), "")
+                 for i in range(len(unique))}
+    write_results(
+        renamed, geo_final,
+        result_file, results_dir,
+        len(urls), sources_ok, raw_count, dup_count,
+    )
 
-    log.info("Сохранено: %s (%d прокси)", result_file, len(renamed))
     log.info("════ Готово ════")
     return 0
 
@@ -709,13 +867,15 @@ def run(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Proxy Collector v3 — сборщик, дедупликатор, нормализатор."
+        description="Proxy Collector v4 — сборщик, дедупликатор, нормализатор."
     )
-    parser.add_argument("-s", "--source", default=SOURCE_FILE,
+    parser.add_argument("-s", "--source",  default=SOURCE_FILE,
                         help=f"Файл источников (по умолчанию: {SOURCE_FILE})")
-    parser.add_argument("-o", "--output", default=RESULT_FILE,
+    parser.add_argument("-o", "--output",  default=RESULT_FILE,
                         help=f"Файл результатов (по умолчанию: {RESULT_FILE})")
+    parser.add_argument("-r", "--results", default=RESULTS_DIR,
+                        help=f"Папка результатов по протоколам (по умолчанию: {RESULTS_DIR})")
     parser.add_argument("-v", "--verbose", action="store_true",
                         help="Подробный вывод (DEBUG)")
     args = parser.parse_args()
-    sys.exit(run(args.source, args.output, args.verbose))
+    sys.exit(run(args.source, args.output, args.results, args.verbose))
