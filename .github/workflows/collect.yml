@@ -15,13 +15,13 @@ on:
         type: boolean
 
 permissions:
-  contents: write   # нужно для коммита result.txt обратно в репо
+  contents: write   # нужно для коммита result.txt / results/ обратно в репо
 
 jobs:
   collect:
     name: Collect & Deduplicate Proxies
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60   # geo-запросы к 7000+ хостам занимают время
 
     steps:
       # ── 1. Клонируем репозиторий ───────────────────────────────────────────
@@ -51,26 +51,33 @@ jobs:
             VERBOSE_FLAG="--verbose"
           fi
           python collector.py \
-            --source source.txt \
-            --output result.txt \
+            --source  source.txt \
+            --output  result.txt \
+            --results results \
             $VERBOSE_FLAG
 
-      # ── 5. Краткая статистика в сводке Actions ────────────────────────────
+      # ── 5. Краткая сводка в интерфейсе Actions ────────────────────────────
       - name: 📊 Print summary
         run: |
           echo "### 📡 Результаты сборки" >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
-          head -25 result.txt >> $GITHUB_STEP_SUMMARY
+          head -30 result.txt >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
           TOTAL=$(grep -v '^#' result.txt | grep -c '://' || true)
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Итого уникальных прокси:** $TOTAL" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Файлы по протоколам:**" >> $GITHUB_STEP_SUMMARY
+          for f in results/*.txt; do
+            COUNT=$(grep -c '://' "$f" 2>/dev/null || true)
+            echo "- \`$(basename $f)\`: $COUNT" >> $GITHUB_STEP_SUMMARY
+          done
 
-      # ── 6. Коммитим обновлённые файлы обратно в репо ─────────────────────
-      - name: 💾 Commit result.txt
+      # ── 6. Коммитим result.txt, results/ и лог ────────────────────────────
+      - name: 💾 Commit results
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "🤖 auto: update proxies [$(date +'%Y-%m-%d %H:%M UTC')]"
-          file_pattern: "result.txt collector.log"
+          file_pattern: "result.txt results/*.txt collector.log"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
