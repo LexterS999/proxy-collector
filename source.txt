@@ -14,38 +14,15 @@
 # ──────────────────────────────────────────────────────────────────────────────
 # ДОБАВЬТЕ СЮДА СВОИ ИСТОЧНИКИ:
 # ──────────────────────────────────────────────────────────────────────────────
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS+All_RUS.txt
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-checked.txt
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt
 https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/kind/vless.txt
-https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/main/output/converted.txt
-https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/main/ws_tls/proxies/wstls
 https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/kind/hysteria.txt
 https://raw.githubusercontent.com/MahanKenway/Freedom-V2Ray/main/configs/mix.txt
 https://raw.githubusercontent.com/JeBance/CheburNet/gh-pages/cheburnet.txt#CheburNet%20-%20Russian%20VLESS%20list
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/1.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/2.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/3.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/4.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/5.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/6.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/7.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/8.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/9.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/10.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/11.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/12.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/13.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/14.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/15.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/16.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/17.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/18.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/19.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/20.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/21.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/22.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/23.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/24.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/25.txt
-https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/26.txt
 https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/subscriptions/mix-base64.txt
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt
