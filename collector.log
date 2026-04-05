@@ -623,3 +623,56 @@
 2026-04-05 07:13:59,552 [INFO] Статистика: 3 записей → stats.json
 2026-04-05 07:13:59,553 [INFO] Dashboard → dashboard.html
 2026-04-05 07:13:59,553 [INFO] ════ Готово за 17.7с ════
+2026-04-05 10:29:27,051 [INFO] ════ Proxy Collector v7 запущен ════
+2026-04-05 10:29:27,051 [INFO] Источников: 14 из source.txt
+2026-04-05 10:29:27,051 [INFO] [2/14] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS+All_RUS.txt
+2026-04-05 10:29:27,057 [INFO] [9/14] https://raw.githubusercontent.com/JeBance/CheburNet/gh-pages/cheburnet.txt#CheburNet%20-%20Russian%20VLESS%20list
+2026-04-05 10:29:27,057 [INFO] [6/14] https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/kind/vless.txt
+2026-04-05 10:29:27,057 [INFO] [12/14] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt
+2026-04-05 10:29:27,057 [INFO] [14/14] https://raw.githubusercontent.com/makriq-org/short-key-list/refs/heads/main/data/short-key-list.txt
+2026-04-05 10:29:27,057 [INFO] [11/14] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt
+2026-04-05 10:29:27,058 [INFO] [8/14] https://raw.githubusercontent.com/MahanKenway/Freedom-V2Ray/main/configs/mix.txt
+2026-04-05 10:29:27,058 [INFO] [4/14] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-checked.txt
+2026-04-05 10:29:27,058 [INFO] [3/14] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt
+2026-04-05 10:29:27,058 [INFO] [13/14] https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed
+2026-04-05 10:29:27,058 [INFO] [1/14] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt
+2026-04-05 10:29:27,058 [INFO] [7/14] https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/kind/hysteria.txt
+2026-04-05 10:29:27,059 [INFO] [10/14] https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/subscriptions/mix-base64.txt
+2026-04-05 10:29:27,059 [INFO] [5/14] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt
+2026-04-05 10:29:27,097 [INFO]   ↳ Найдено: 62
+2026-04-05 10:29:27,101 [INFO]   ↳ Найдено: 188
+2026-04-05 10:29:27,103 [INFO]   ↳ Найдено: 199
+2026-04-05 10:29:27,105 [INFO]   ↳ Найдено: 285
+2026-04-05 10:29:27,110 [INFO]   ↳ Найдено: 0
+2026-04-05 10:29:27,121 [INFO]   ↳ Найдено: 589
+2026-04-05 10:29:27,124 [INFO]   ↳ Найдено: 313
+2026-04-05 10:29:27,127 [INFO]   ↳ Найдено: 249
+2026-04-05 10:29:27,128 [INFO]   ↳ Найдено: 43
+2026-04-05 10:29:27,129 [INFO]   ↳ Найдено: 200
+2026-04-05 10:29:27,133 [INFO]   ↳ Найдено: 17
+2026-04-05 10:29:27,155 [INFO]   ↳ Найдено: 2127
+2026-04-05 10:29:27,179 [INFO]   ↳ Найдено: 1846
+2026-04-05 10:29:27,442 [INFO]   ↳ Найдено: 8257
+2026-04-05 10:29:27,444 [INFO] Загрузка: 0.4с | извлечено 14375 (raw)
+2026-04-05 10:29:27,653 [INFO] После нормализации: 14372
+2026-04-05 10:29:28,141 [INFO] Dedup A: 14372 → 8882 (удалено 5490, полный отпечаток)
+2026-04-05 10:29:28,142 [INFO] Проверка живости: 8882 прокси (TCP 3s, 500 parallel)...
+2026-04-05 10:29:49,523 [INFO] Живых: 5700/8882 (64%) за 21.4с
+2026-04-05 10:29:49,534 [INFO] Живых (до Dedup B): 5700/8882 за 21.4с
+2026-04-05 10:29:49,633 [INFO] Dedup B: 5700 → 4568 (удалено 1132, host+port+credential)
+2026-04-05 10:29:49,725 [INFO] Геолокация: 3217 хостов | кэш: 2974 hit | запросы: 243 новых
+2026-04-05 10:29:52,892 [INFO]   Geo: 3/3 батчей | определено 28/243
+2026-04-05 10:29:52,893 [INFO] Геолокация завершена: +28 новых записей, итого 9051 в кэше
+2026-04-05 10:29:52,893 [INFO] Геолокация: 3.2с (+27 новых в кэше)
+2026-04-05 10:29:52,901 [INFO] Geo cache: 9051 записей → geo_cache.json
+2026-04-05 10:29:53,108 [INFO] Записан result.txt: 4568 прокси
+2026-04-05 10:29:53,138 [INFO]   results/hy2.txt: 4
+2026-04-05 10:29:53,138 [INFO]   results/ss.txt: 544
+2026-04-05 10:29:53,138 [INFO]   results/ssr.txt: 70
+2026-04-05 10:29:53,138 [INFO]   results/trojan.txt: 163
+2026-04-05 10:29:53,139 [INFO]   results/tuic.txt: 1
+2026-04-05 10:29:53,140 [INFO]   results/vless.txt: 2982
+2026-04-05 10:29:53,141 [INFO]   results/vmess.txt: 804
+2026-04-05 10:29:53,207 [INFO] Статистика: 4 записей → stats.json
+2026-04-05 10:29:53,207 [INFO] Dashboard → dashboard.html
+2026-04-05 10:29:53,207 [INFO] ════ Готово за 26.2с ════
