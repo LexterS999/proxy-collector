@@ -3,8 +3,6 @@
 Автоматический **async** сборщик, дедупликатор и нормализатор прокси-ссылок.  
 Запускается ежедневно через **GitHub Actions**, проверяет живость каждого прокси и публикует чистые списки с дашбордом.
 
-[![Daily Proxy Collector](https://github.com/LexterS999/proxy-collector/actions/workflows/collect.yml)](https://github.com/LexterS999/proxy-collector/actions/workflows/collect.yml)
-
 ---
 
 ## 📦 Поддерживаемые протоколы
