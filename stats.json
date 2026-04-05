@@ -343,5 +343,120 @@
         "ok": true
       }
     ]
+  },
+  {
+    "ts": "2026-04-05T07:13:59Z",
+    "date": "2026-04-05",
+    "sources_total": 14,
+    "sources_ok": 14,
+    "raw": 14514,
+    "unique": 8997,
+    "alive": 5626,
+    "alive_pct": 62.5,
+    "dups": 5515,
+    "geo_covered": 5468,
+    "protocols": {
+      "VLESS": 3860,
+      "VMESS": 1000,
+      "TROJAN": 198,
+      "SS": 545,
+      "SSR": 8,
+      "HY2": 14,
+      "TUIC": 1
+    },
+    "countries": {
+      "RU": 1581,
+      "CA": 1045,
+      "US": 460,
+      "DE": 407,
+      "NL": 346,
+      "VN": 325,
+      "FR": 208,
+      "??": 158,
+      "GB": 155,
+      "CY": 66,
+      "JP": 64,
+      "SG": 61,
+      "FI": 55,
+      "HK": 55,
+      "SE": 55,
+      "PL": 48,
+      "BZ": 47,
+      "LV": 47,
+      "HU": 35,
+      "KR": 33
+    },
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt",
+        "found": 267,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
+        "found": 71,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
+        "found": 19,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+        "found": 427,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed",
+        "found": 511,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-checked.txt",
+        "found": 275,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS+All_RUS.txt",
+        "found": 41,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/kind/hysteria.txt",
+        "found": 0,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/JeBance/CheburNet/gh-pages/cheburnet.txt#CheburNet%20-%20Russian%20VLESS%20list",
+        "found": 284,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt",
+        "found": 188,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/makriq-org/short-key-list/refs/heads/main/data/short-key-list.txt",
+        "found": 200,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MahanKenway/Freedom-V2Ray/main/configs/mix.txt",
+        "found": 1844,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/kind/vless.txt",
+        "found": 2127,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/subscriptions/mix-base64.txt",
+        "found": 8260,
+        "ok": true
+      }
+    ]
   }
 ]

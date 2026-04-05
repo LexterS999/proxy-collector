@@ -1,10 +1,9 @@
 # ═══════════════════════════════════════════════════════════
-#  HY2 — 16 прокси
-#  Обновлено: 2026-04-05 04:44 UTC
-#  Прокси  : 16
+#  HY2 — 14 прокси
+#  Обновлено: 2026-04-05 07:13 UTC
+#  Прокси  : 14
 # ═══════════════════════════════════════════════════════════
 hy2://123456789StrongPass@144.31.224.14:443/?insecure=1&sni=www.cloudflare.com#🇳🇱 NL HY2
-hy2://rstnnl@reddeadfan.rd-team.ru:443?sni=reddeadfan.rd-team.ru&obfs=salamander&obfs-password=FxZylbqClUqVqAs2nezW9kPyFb2edZ2#🌐 ?? HY2
 hy2://Telegram--#🌐 ?? HY2
 hysteria2://123456789StrongPass@144.31.224.14:443?insecure=1&sni=eh.vk.com&type=tcp&allowInsecure=1&upmbps=10&downmbps=50#🇳🇱 NL HY2
 hysteria2://123456789StrongPass@144.31.224.14:443?insecure=1&sni=eh.vk.com&type=tcp&upmbps=10&downmbps=50#🇳🇱 NL HY2
@@ -13,9 +12,8 @@ hysteria2://123456789StrongPass@144.31.224.14:443?sni=eh.vk.com&insecure=1&allow
 hysteria2://123456789StrongPass@144.31.224.14:443/?insecure=1&amp&sni=www.cloudflare.com#🇳🇱 NL HY2
 hysteria2://123456789StrongPass@144.31.224.14:443/?insecure=1&amp;sni=www.cloudflare.com#🇳🇱 NL HY2
 hysteria2://123456789StrongPass@144.31.224.14:443/?insecure=1&sni=www.cloudflare.com#🇳🇱 NL HY2
-hysteria2://123456789StrongPass@144.31.224.14:443?insecure=1#🇳🇱 NL HY2
 hysteria2://123456789StrongPass@144.31.224.14:443?insecure=1&allowInsecure=1#🇳🇱 NL HY2
-hysteria2://123456789StrongPass@144.31.224.14:443?security=tls&allowInsecure=true#🇳🇱 NL HY2
 hysteria2://123456789StrongPass@144.31.224.14:443?security=tls&sni=www.cloudflare.com&allowInsecure=true#🇳🇱 NL HY2
 hysteria2://123456789StrongPass@144.31.224.14:443?sni=www.cloudflare.com&insecure=1&allowInsecure=1#🇳🇱 NL HY2
+hysteria2://123456789StrongPass@144.31.224.14:443?upmbps=10&downmbps=50&security=tls&sni=eh.@solidtrust.com&allowInsecure=true#🇳🇱 NL HY2
 hysteria2://123456@192.3.85.237:443?insecure=1&sni=bing.com#🇺🇸 US HY2
