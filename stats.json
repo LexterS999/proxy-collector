@@ -1,0 +1,232 @@
+[
+  {
+    "ts": "2026-04-05T04:41:54Z",
+    "date": "2026-04-05",
+    "sources_total": 37,
+    "sources_ok": 37,
+    "raw": 79425,
+    "unique": 44697,
+    "alive": 19697,
+    "alive_pct": 44.1,
+    "dups": 34130,
+    "geo_covered": 18584,
+    "protocols": {
+      "VLESS": 14389,
+      "VMESS": 2015,
+      "TROJAN": 1591,
+      "SS": 1674,
+      "SSR": 14,
+      "HY2": 12,
+      "TUIC": 2
+    },
+    "countries": {
+      "CA": 7886,
+      "US": 2108,
+      "RU": 1778,
+      "??": 1113,
+      "DE": 1044,
+      "NL": 821,
+      "GB": 628,
+      "FR": 390,
+      "VN": 361,
+      "SE": 306,
+      "CR": 276,
+      "HK": 241,
+      "JP": 214,
+      "PL": 213,
+      "LV": 161,
+      "SG": 158,
+      "HU": 149,
+      "FI": 146,
+      "KZ": 111,
+      "CY": 107
+    },
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/kind/hysteria.txt",
+        "found": 0,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt",
+        "found": 188,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt",
+        "found": 242,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/21.txt",
+        "found": 181,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/4.txt",
+        "found": 78,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/7.txt",
+        "found": 328,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/9.txt",
+        "found": 278,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/15.txt",
+        "found": 11,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/13.txt",
+        "found": 81,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/8.txt",
+        "found": 95,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed",
+        "found": 530,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/26.txt",
+        "found": 150,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/subscriptions/mix-base64.txt",
+        "found": 8255,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/16.txt",
+        "found": 263,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/14.txt",
+        "found": 738,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/main/ws_tls/proxies/wstls",
+        "found": 61,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/kind/vless.txt",
+        "found": 2136,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/JeBance/CheburNet/gh-pages/cheburnet.txt#CheburNet%20-%20Russian%20VLESS%20list",
+        "found": 363,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/22.txt",
+        "found": 1881,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/1.txt",
+        "found": 2924,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/20.txt",
+        "found": 1951,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/10.txt",
+        "found": 3650,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/3.txt",
+        "found": 7506,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/11.txt",
+        "found": 679,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/makriq-org/short-key-list/refs/heads/main/data/short-key-list.txt",
+        "found": 200,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/18.txt",
+        "found": 1345,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/23.txt",
+        "found": 4362,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/24.txt",
+        "found": 74,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/main/output/converted.txt",
+        "found": 400,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/17.txt",
+        "found": 594,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/5.txt",
+        "found": 1212,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/25.txt",
+        "found": 138,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/6.txt",
+        "found": 145,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/2.txt",
+        "found": 21565,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/19.txt",
+        "found": 2277,
+        "ok": true
+      },
+      {
+        "url": "https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/12.txt",
+        "found": 12714,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MahanKenway/Freedom-V2Ray/main/configs/mix.txt",
+        "found": 1830,
+        "ok": true
+      }
+    ]
+  }
+]

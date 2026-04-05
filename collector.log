@@ -373,3 +373,149 @@
 2026-04-04 15:13:44,218 [INFO]   results/vmess.txt: 5077 прокси
 2026-04-04 15:13:44,218 [INFO]   results/wg.txt: 3 прокси
 2026-04-04 15:13:44,219 [INFO] ════ Готово за 827.9с ════
+2026-04-05 04:33:56,014 [INFO] ════ Proxy Collector v6 запущен ════
+2026-04-05 04:33:56,015 [INFO] Источников: 37 из source.txt
+2026-04-05 04:33:56,015 [INFO] [19/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/13.txt
+2026-04-05 04:33:56,083 [INFO] [13/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/7.txt
+2026-04-05 04:33:56,084 [INFO] [7/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/1.txt
+2026-04-05 04:33:56,084 [INFO] [2/37] https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/main/output/converted.txt
+2026-04-05 04:33:56,085 [INFO] [32/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/26.txt
+2026-04-05 04:33:56,085 [INFO] [26/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/20.txt
+2026-04-05 04:33:56,085 [INFO] [20/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/14.txt
+2026-04-05 04:33:56,086 [INFO] [14/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/8.txt
+2026-04-05 04:33:56,086 [INFO] [8/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/2.txt
+2026-04-05 04:33:56,086 [INFO] [4/37] https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/kind/hysteria.txt
+2026-04-05 04:33:56,086 [INFO] [33/37] https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/subscriptions/mix-base64.txt
+2026-04-05 04:33:56,086 [INFO] [27/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/21.txt
+2026-04-05 04:33:56,086 [INFO] [21/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/15.txt
+2026-04-05 04:33:56,087 [INFO] [15/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/9.txt
+2026-04-05 04:33:56,087 [INFO] [9/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/3.txt
+2026-04-05 04:33:56,087 [INFO] [34/37] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt
+2026-04-05 04:33:56,087 [INFO] [28/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/22.txt
+2026-04-05 04:33:56,087 [INFO] [22/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/16.txt
+2026-04-05 04:33:56,087 [INFO] [16/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/10.txt
+2026-04-05 04:33:56,088 [INFO] [10/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/4.txt
+2026-04-05 04:33:56,209 [INFO]   ↳ Найдено: 0
+2026-04-05 04:33:56,209 [INFO] [5/37] https://raw.githubusercontent.com/MahanKenway/Freedom-V2Ray/main/configs/mix.txt
+2026-04-05 04:33:56,241 [INFO]   ↳ Найдено: 188
+2026-04-05 04:33:56,241 [INFO] [35/37] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt
+2026-04-05 04:33:56,371 [INFO]   ↳ Найдено: 242
+2026-04-05 04:33:56,371 [INFO] [29/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/23.txt
+2026-04-05 04:33:56,437 [INFO]   ↳ Найдено: 181
+2026-04-05 04:33:56,438 [INFO]   ↳ Найдено: 78
+2026-04-05 04:33:56,439 [INFO] [23/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/17.txt
+2026-04-05 04:33:56,439 [INFO] [17/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/11.txt
+2026-04-05 04:33:56,444 [INFO]   ↳ Найдено: 328
+2026-04-05 04:33:56,444 [INFO] [11/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/5.txt
+2026-04-05 04:33:56,458 [INFO]   ↳ Найдено: 278
+2026-04-05 04:33:56,458 [INFO] [6/37] https://raw.githubusercontent.com/JeBance/CheburNet/gh-pages/cheburnet.txt#CheburNet%20-%20Russian%20VLESS%20list
+2026-04-05 04:33:56,460 [INFO]   ↳ Найдено: 11
+2026-04-05 04:33:56,460 [INFO] [3/37] https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/main/ws_tls/proxies/wstls
+2026-04-05 04:33:56,461 [INFO]   ↳ Найдено: 81
+2026-04-05 04:33:56,461 [INFO] [1/37] https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/kind/vless.txt
+2026-04-05 04:33:56,479 [INFO]   ↳ Найдено: 95
+2026-04-05 04:33:56,479 [INFO] [36/37] https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed
+2026-04-05 04:33:56,492 [INFO]   ↳ Найдено: 530
+2026-04-05 04:33:56,492 [INFO] [30/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/24.txt
+2026-04-05 04:33:56,494 [INFO]   ↳ Найдено: 150
+2026-04-05 04:33:56,495 [INFO] [24/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/18.txt
+2026-04-05 04:33:56,641 [INFO]   ↳ Найдено: 8255
+2026-04-05 04:33:56,641 [INFO] [18/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/12.txt
+2026-04-05 04:33:56,652 [INFO]   ↳ Найдено: 263
+2026-04-05 04:33:56,655 [INFO]   ↳ Найдено: 738
+2026-04-05 04:33:56,657 [INFO]   ↳ Найдено: 61
+2026-04-05 04:33:56,668 [INFO]   ↳ Найдено: 2136
+2026-04-05 04:33:56,670 [INFO]   ↳ Найдено: 363
+2026-04-05 04:33:56,672 [INFO] [12/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/6.txt
+2026-04-05 04:33:56,672 [INFO] [37/37] https://raw.githubusercontent.com/makriq-org/short-key-list/refs/heads/main/data/short-key-list.txt
+2026-04-05 04:33:56,672 [INFO] [31/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/25.txt
+2026-04-05 04:33:56,673 [INFO] [25/37] https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/19.txt
+2026-04-05 04:33:56,694 [INFO]   ↳ Найдено: 1881
+2026-04-05 04:33:56,708 [INFO]   ↳ Найдено: 2924
+2026-04-05 04:33:56,720 [INFO]   ↳ Найдено: 1951
+2026-04-05 04:33:56,771 [INFO]   ↳ Найдено: 3650
+2026-04-05 04:33:56,815 [INFO]   ↳ Найдено: 7506
+2026-04-05 04:33:56,819 [INFO]   ↳ Найдено: 679
+2026-04-05 04:33:56,820 [INFO]   ↳ Найдено: 200
+2026-04-05 04:33:56,826 [INFO]   ↳ Найдено: 1345
+2026-04-05 04:33:56,863 [INFO]   ↳ Найдено: 4362
+2026-04-05 04:33:56,864 [INFO]   ↳ Найдено: 74
+2026-04-05 04:33:56,907 [INFO]   ↳ Найдено: 400
+2026-04-05 04:33:56,924 [INFO]   ↳ Найдено: 594
+2026-04-05 04:33:56,945 [INFO]   ↳ Найдено: 1212
+2026-04-05 04:33:56,946 [INFO]   ↳ Найдено: 138
+2026-04-05 04:33:56,964 [INFO]   ↳ Найдено: 145
+2026-04-05 04:33:57,089 [INFO]   ↳ Найдено: 21565
+2026-04-05 04:33:57,099 [INFO]   ↳ Найдено: 2277
+2026-04-05 04:33:57,615 [INFO]   ↳ Найдено: 12714
+2026-04-05 04:33:58,094 [INFO]   ↳ Найдено: 1830
+2026-04-05 04:33:58,098 [INFO] Загрузка: 2.1с | извлечено 79425 (с дублями)
+2026-04-05 04:33:59,101 [INFO] После нормализации: 78827
+2026-04-05 04:34:01,981 [INFO] После дедупликации: 44697 (удалено: 34130)
+2026-04-05 04:34:01,981 [INFO] Проверка живости: 44697 прокси (TCP 3s timeout, 800 parallel)...
+2026-04-05 04:35:32,109 [INFO] Живых: 19697/44697 (44%) за 90.1с
+2026-04-05 04:35:32,117 [INFO] Живых: 19697/44697 за 90.1с
+2026-04-05 04:35:32,479 [INFO] Геолокация: 9504 хостов | кэш: 0 hit | запросы: 9504
+2026-04-05 04:35:38,514 [INFO]   Geo: 5/96 батчей, 485 определено
+2026-04-05 04:35:46,022 [INFO]   Geo: 10/96 батчей, 963 определено
+2026-04-05 04:35:50,527 [DEBUG] Rate-limit X-Rl=2, extra sleep 45s
+2026-04-05 04:35:52,035 [DEBUG] Rate-limit X-Rl=1, extra sleep 43s
+2026-04-05 04:35:53,530 [DEBUG] Rate-limit X-Rl=0, extra sleep 42s
+2026-04-05 04:36:35,075 [DEBUG] Rate-limit X-Rl=0, extra sleep 2s
+2026-04-05 04:36:35,531 [INFO]   Geo: 15/96 батчей, 1412 определено
+2026-04-05 04:36:37,077 [WARNING] Geo 429 — backoff 65s (попытка 1/3)
+2026-04-05 04:36:42,573 [INFO]   Geo: 20/96 батчей, 1912 определено
+2026-04-05 04:36:50,081 [INFO]   Geo: 25/96 батчей, 2411 определено
+2026-04-05 04:36:54,587 [DEBUG] Rate-limit X-Rl=2, extra sleep 41s
+2026-04-05 04:36:56,090 [DEBUG] Rate-limit X-Rl=1, extra sleep 40s
+2026-04-05 04:37:35,635 [DEBUG] Rate-limit X-Rl=0, extra sleep 2s
+2026-04-05 04:37:37,111 [DEBUG] Rate-limit X-Rl=0, extra sleep 2s
+2026-04-05 04:37:37,637 [INFO]   Geo: 30/96 батчей, 2899 определено
+2026-04-05 04:37:39,113 [WARNING] Geo 429 — backoff 65s (попытка 1/3)
+2026-04-05 04:37:44,624 [INFO]   Geo: 35/96 батчей, 3366 определено
+2026-04-05 04:37:52,134 [INFO]   Geo: 40/96 батчей, 3815 определено
+2026-04-05 04:37:56,642 [DEBUG] Rate-limit X-Rl=2, extra sleep 41s
+2026-04-05 04:37:58,156 [DEBUG] Rate-limit X-Rl=1, extra sleep 40s
+2026-04-05 04:38:37,693 [DEBUG] Rate-limit X-Rl=0, extra sleep 2s
+2026-04-05 04:38:39,170 [DEBUG] Rate-limit X-Rl=0, extra sleep 2s
+2026-04-05 04:38:39,695 [INFO]   Geo: 45/96 батчей, 4173 определено
+2026-04-05 04:38:41,171 [WARNING] Geo 429 — backoff 65s (попытка 1/3)
+2026-04-05 04:38:46,685 [INFO]   Geo: 50/96 батчей, 4606 определено
+2026-04-05 04:38:54,197 [INFO]   Geo: 55/96 батчей, 5101 определено
+2026-04-05 04:38:58,702 [DEBUG] Rate-limit X-Rl=2, extra sleep 41s
+2026-04-05 04:39:00,202 [DEBUG] Rate-limit X-Rl=1, extra sleep 40s
+2026-04-05 04:39:39,741 [DEBUG] Rate-limit X-Rl=0, extra sleep 2s
+2026-04-05 04:39:41,227 [DEBUG] Rate-limit X-Rl=0, extra sleep 2s
+2026-04-05 04:39:41,742 [INFO]   Geo: 60/96 батчей, 5599 определено
+2026-04-05 04:39:43,230 [WARNING] Geo 429 — backoff 65s (попытка 1/3)
+2026-04-05 04:39:48,740 [INFO]   Geo: 65/96 батчей, 6096 определено
+2026-04-05 04:39:56,250 [INFO]   Geo: 70/96 батчей, 6592 определено
+2026-04-05 04:40:00,755 [DEBUG] Rate-limit X-Rl=2, extra sleep 41s
+2026-04-05 04:40:02,258 [DEBUG] Rate-limit X-Rl=1, extra sleep 40s
+2026-04-05 04:40:41,804 [DEBUG] Rate-limit X-Rl=0, extra sleep 2s
+2026-04-05 04:40:43,280 [DEBUG] Rate-limit X-Rl=0, extra sleep 2s
+2026-04-05 04:40:43,805 [INFO]   Geo: 75/96 батчей, 7089 определено
+2026-04-05 04:40:45,281 [WARNING] Geo 429 — backoff 65s (попытка 1/3)
+2026-04-05 04:40:50,794 [INFO]   Geo: 80/96 батчей, 7579 определено
+2026-04-05 04:40:58,301 [INFO]   Geo: 85/96 батчей, 8009 определено
+2026-04-05 04:41:02,810 [DEBUG] Rate-limit X-Rl=2, extra sleep 41s
+2026-04-05 04:41:04,312 [DEBUG] Rate-limit X-Rl=1, extra sleep 40s
+2026-04-05 04:41:43,861 [DEBUG] Rate-limit X-Rl=0, extra sleep 2s
+2026-04-05 04:41:45,340 [INFO]   Geo: 90/96 батчей, 8509 определено
+2026-04-05 04:41:51,344 [INFO]   Geo: 95/96 батчей, 8896 определено
+2026-04-05 04:41:52,850 [INFO]   Geo: 96/96 батчей, 8983 определено
+2026-04-05 04:41:52,851 [INFO] Геолокация завершена: +8983 новых, итого 8983 в кэше
+2026-04-05 04:41:52,851 [INFO] Геолокация: 380.5с (+8983 в кэше)
+2026-04-05 04:41:52,853 [INFO] Geo cache: сохранено 8983 записей → geo_cache.json
+2026-04-05 04:41:53,688 [INFO] Записан result.txt: 19697 прокси
+2026-04-05 04:41:53,816 [INFO]   results/hy2.txt: 12
+2026-04-05 04:41:53,817 [INFO]   results/ss.txt: 1674
+2026-04-05 04:41:53,817 [INFO]   results/ssr.txt: 14
+2026-04-05 04:41:53,818 [INFO]   results/trojan.txt: 1591
+2026-04-05 04:41:53,818 [INFO]   results/tuic.txt: 2
+2026-04-05 04:41:53,830 [INFO]   results/vless.txt: 14389
+2026-04-05 04:41:53,833 [INFO]   results/vmess.txt: 2015
+2026-04-05 04:41:53,834 [INFO]   Удалён устаревший wg.txt
+2026-04-05 04:41:54,091 [INFO] Статистика: 1 записей → stats.json
+2026-04-05 04:41:54,091 [INFO] Dashboard → dashboard.html
+2026-04-05 04:41:54,091 [INFO] ════ Готово за 478.1с ════
