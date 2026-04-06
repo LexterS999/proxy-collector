@@ -1,9 +1,12 @@
 # ═══════════════════════════════════════════════════════════
-#  HY2 — 4 прокси
-#  Обновлено: 2026-04-05 10:29 UTC
-#  Прокси  : 4
+#  HY2 — 7 прокси
+#  Обновлено: 2026-04-06 07:51 UTC
+#  Прокси  : 7
 # ═══════════════════════════════════════════════════════════
 hy2://Telegram--#🌐 ?? HY2
 hy2://rstnnl@reddeadfan.rd-team.ru:443?sni=reddeadfan.rd-team.ru&obfs=salamander&obfs-password=FxZylbqClUqVqAs2nezW9kPyFb2edZ2#🌐 ?? HY2
-hysteria2://123456789StrongPass@144.31.224.14:443/?insecure=1&amp;sni=www.cloudflare.com#🇳🇱 NL HY2
+hysteria2://0f771058-7892-4d46-b77e-a69e811b9cbc@84.200.91.118:443/?insecure=1&sni=hls-svod.itunes.apple.com#🇩🇪 DE HY2
+hysteria2://0f771058-7892-4d46-b77e-a69e811b9cbc@84.201.25.156:443/?insecure=1&sni=hls-svod.itunes.apple.com#🇩🇪 DE HY2
+hysteria2://123456789StrongPass@144.31.224.14:443?insecure=1&sni=eh.vk.com&type=tcp&allowInsecure=1&upmbps=10&downmbps=50#🇳🇱 NL HY2
+hysteria2://0f771058-7892-4d46-b77e-a69e811b9cbc@89.124.73.31:443/?insecure=1&sni=hls-svod.itunes.apple.com#🇳🇱 NL HY2
 hysteria2://123456@192.3.85.237:443?insecure=1&sni=bing.com#🇺🇸 US HY2
