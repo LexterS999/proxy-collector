@@ -771,3 +771,46 @@
 2026-04-07 07:05:54,799 [INFO] Статистика: 6 записей → stats.json
 2026-04-07 07:05:54,800 [INFO] Dashboard → dashboard.html
 2026-04-07 07:05:54,800 [INFO] ════ Готово за 10.3с ════
+2026-04-07 07:25:07,445 [INFO] ════ Proxy Collector v7 запущен ════
+2026-04-07 07:25:07,445 [INFO] Источников: 10 из source.txt
+2026-04-07 07:25:07,445 [INFO] [2/10] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS+All_RUS.txt
+2026-04-07 07:25:07,449 [INFO] [9/10] https://scarlet-devil.vercel.app/sub2
+2026-04-07 07:25:07,450 [INFO] [6/10] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt
+2026-04-07 07:25:07,450 [INFO] [8/10] https://scarlet-devil.vercel.app/sub1
+2026-04-07 07:25:07,450 [INFO] [4/10] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-checked.txt
+2026-04-07 07:25:07,451 [INFO] [3/10] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt
+2026-04-07 07:25:07,451 [INFO] [1/10] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt
+2026-04-07 07:25:07,451 [INFO] [7/10] https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed
+2026-04-07 07:25:07,451 [INFO] [10/10] https://scarlet-devil.vercel.app/sub3
+2026-04-07 07:25:07,451 [INFO] [5/10] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt
+2026-04-07 07:25:07,469 [INFO]   ↳ Найдено: 101
+2026-04-07 07:25:07,472 [INFO]   ↳ Найдено: 6
+2026-04-07 07:25:07,523 [INFO]   ↳ Найдено: 666
+2026-04-07 07:25:07,524 [INFO]   ↳ Найдено: 87
+2026-04-07 07:25:07,524 [INFO]   ↳ Найдено: 78
+2026-04-07 07:25:07,534 [INFO]   ↳ Найдено: 281
+2026-04-07 07:25:07,534 [INFO]   ↳ Найдено: 42
+2026-04-07 07:25:07,553 [INFO]   ↳ Найдено: 862
+2026-04-07 07:25:07,586 [INFO]   ↳ Найдено: 176
+2026-04-07 07:25:07,593 [INFO]   ↳ Найдено: 0
+2026-04-07 07:25:07,594 [INFO] Загрузка: 0.1с | извлечено 2299 (raw)
+2026-04-07 07:25:07,631 [INFO] После нормализации: 2283
+2026-04-07 07:25:07,708 [INFO] Dedup A: 2283 → 2121 (удалено 162, полный отпечаток)
+2026-04-07 07:25:07,708 [INFO] Проверка живости: 2121 прокси (TCP 3s, 500 parallel)...
+2026-04-07 07:25:14,105 [INFO] Живых: 1428/2121 (67%) за 6.4с
+2026-04-07 07:25:14,106 [INFO] Живых (до Dedup B): 1428/2121 за 6.4с
+2026-04-07 07:25:14,128 [INFO] Dedup B: 1428 → 1286 (удалено 142, host+port+credential)
+2026-04-07 07:25:14,161 [INFO] Геолокация: 1030 хостов | кэш: 918 hit | запросы: 112 новых
+2026-04-07 07:25:15,759 [INFO]   Geo: 2/2 батчей | определено 2/112
+2026-04-07 07:25:15,759 [INFO] Геолокация завершена: +2 новых записей, итого 9320 в кэше
+2026-04-07 07:25:15,760 [INFO] Геолокация: 1.6с (+2 новых в кэше)
+2026-04-07 07:25:15,865 [INFO] Geo cache: 9320 записей → geo_cache.json
+2026-04-07 07:25:15,919 [INFO] Записан result.txt: 1286 прокси
+2026-04-07 07:25:15,927 [INFO]   results/hy2.txt: 1
+2026-04-07 07:25:15,928 [INFO]   results/ss.txt: 300
+2026-04-07 07:25:15,928 [INFO]   results/trojan.txt: 68
+2026-04-07 07:25:15,929 [INFO]   results/vless.txt: 899
+2026-04-07 07:25:15,930 [INFO]   results/vmess.txt: 18
+2026-04-07 07:25:15,956 [INFO] Статистика: 7 записей → stats.json
+2026-04-07 07:25:15,956 [INFO] Dashboard → dashboard.html
+2026-04-07 07:25:15,957 [INFO] ════ Готово за 8.5с ════
