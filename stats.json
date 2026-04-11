@@ -1345,5 +1345,108 @@
         "ok": true
       }
     ]
+  },
+  {
+    "ts": "2026-04-11T07:06:42Z",
+    "date": "2026-04-11",
+    "sources_total": 9,
+    "sources_ok": 9,
+    "raw": 5354,
+    "unique": 4348,
+    "alive": 2099,
+    "alive_pct": 48.3,
+    "dup_a": 996,
+    "dup_b": 582,
+    "geo_covered": 1845,
+    "dc_count": 156,
+    "avg_latency_ms": 186.4,
+    "protocols": {
+      "VLESS": 1729,
+      "VMESS": 33,
+      "TROJAN": 41,
+      "SS": 295,
+      "HY2": 1
+    },
+    "countries": {
+      "RU": 525,
+      "??": 254,
+      "CA": 219,
+      "NL": 196,
+      "DE": 167,
+      "US": 131,
+      "FR": 97,
+      "GB": 79,
+      "HU": 43,
+      "FI": 37,
+      "JP": 27,
+      "LV": 24,
+      "SE": 23,
+      "SG": 18,
+      "PL": 17,
+      "AT": 16,
+      "IN": 16,
+      "HK": 14,
+      "TR": 14,
+      "KZ": 10
+    },
+    "top_isps": {
+      "LLC VK": 98,
+      "OVH SAS": 43,
+      "Yandex.Cloud LLC": 39,
+      "JSC \"TIMEWEB\"": 31,
+      "Global Internet Solutions LLC": 26,
+      "Yandex Cloud": 18,
+      "WorkTitans B.V.": 13,
+      "Play2go International Limited": 10,
+      "Servers Tech Fzco": 8,
+      "Yandex enterprise network": 8
+    },
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
+        "found": 51,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-checked.txt",
+        "found": 25,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
+        "found": 75,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS+All_RUS.txt",
+        "found": 64,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+        "found": 65,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt",
+        "found": 4017,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub1",
+        "found": 188,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub3",
+        "found": 0,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub2",
+        "found": 869,
+        "ok": true
+      }
+    ]
   }
 ]
