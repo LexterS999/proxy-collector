@@ -14,12 +14,15 @@
 # ──────────────────────────────────────────────────────────────────────────────
 # ДОБАВЬТЕ СЮДА СВОИ ИСТОЧНИКИ:
 # ──────────────────────────────────────────────────────────────────────────────
+https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS+All_RUS.txt
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-checked.txt
+https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt
 https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt
+https://raw.githubusercontent.com/MahanKenway/Freedom-V2Ray/main/configs/vless.txt
 https://scarlet-devil.vercel.app/sub1
 https://scarlet-devil.vercel.app/sub2
 https://scarlet-devil.vercel.app/sub3
