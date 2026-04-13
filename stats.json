@@ -1787,5 +1787,143 @@
         "ok": true
       }
     ]
+  },
+  {
+    "ts": "2026-04-13T15:53:51Z",
+    "date": "2026-04-13",
+    "sources_total": 16,
+    "sources_ok": 16,
+    "raw": 12003,
+    "unique": 5272,
+    "alive": 2396,
+    "alive_pct": 45.4,
+    "dup_a": 6731,
+    "dup_b": 840,
+    "geo_covered": 2082,
+    "dc_count": 257,
+    "avg_latency_ms": 283.0,
+    "protocols": {
+      "VLESS": 2086,
+      "VMESS": 19,
+      "TROJAN": 29,
+      "SS": 260,
+      "HY2": 2
+    },
+    "countries": {
+      "RU": 576,
+      "??": 314,
+      "NL": 239,
+      "DE": 183,
+      "CA": 165,
+      "US": 159,
+      "FR": 111,
+      "HU": 91,
+      "GB": 86,
+      "LV": 56,
+      "FI": 47,
+      "HK": 22,
+      "JP": 22,
+      "AT": 20,
+      "PL": 20,
+      "SE": 20,
+      "EE": 19,
+      "SG": 19,
+      "IN": 16,
+      "TR": 13
+    },
+    "top_isps": {
+      "JSC \"TIMEWEB\"": 85,
+      "Yandex.Cloud LLC": 66,
+      "OVH SAS": 49,
+      "WorkTitans B.V.": 39,
+      "LLC VK": 38,
+      "Yandex enterprise network": 20,
+      "Servers Tech Fzco": 16,
+      "Hetzner Online GmbH": 15,
+      "Yandex Cloud": 13,
+      "OC NETWORKS LIMITED": 11
+    },
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
+        "found": 73,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Maskkost93/kizyak-vpn-4.0/refs/heads/main/kizyaktestru.txt",
+        "found": 60,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+        "found": 84,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-checked.txt",
+        "found": 30,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS+All_RUS.txt",
+        "found": 58,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Maskkost93/kizyak-vpn-4.0/refs/heads/main/kizyakbeta6.txt",
+        "found": 77,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Maskkost93/kizyak-vpn-4.0/refs/heads/main/kizyakbeta6BL.txt",
+        "found": 76,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
+        "found": 14,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MahanKenway/Freedom-V2Ray/main/configs/vless.txt",
+        "found": 133,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Maskkost93/kizyak-vpn-4.0/refs/heads/main/kizyakbeta7.txt",
+        "found": 284,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub3",
+        "found": 0,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt",
+        "found": 4165,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt",
+        "found": 4165,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt",
+        "found": 1940,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub1",
+        "found": 170,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub2",
+        "found": 674,
+        "ok": true
+      }
+    ]
   }
 ]
