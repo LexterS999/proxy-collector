@@ -1,9 +1,9 @@
 name: 🔄 Daily Proxy Collector
 
 on:
-  # Автоматический запуск каждый день в 06:00 UTC
+  # Автоматический запуск каждые шесть часов
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "0 */6 * * *"
 
   # Ручной запуск через Actions → Run workflow
   workflow_dispatch:
