@@ -1,8 +1,7 @@
 # ═══════════════════════════════════════════════════════════
-#  HY2 — 3 прокси
-#  Обновлено: 2026-04-14 06:08 UTC
-#  Прокси  : 3
+#  HY2 — 2 прокси
+#  Обновлено: 2026-04-14 13:18 UTC
+#  Прокси  : 2
 # ═══════════════════════════════════════════════════════════
-hysteria2://tg_5509689408_3c7c70a5%3Acb574222a18fedb055c49e5a@45.82.245.214:443?insecure=1#🇧🇷 BR HY2
 hysteria2://dongtaiwang.com@163.172.113.118:40022?insecure=1&sni=www.microsoft.com&mport=41000#🇫🇷 FR HY2
-hysteria2://123456789StrongPass@144.31.224.14:443/?insecure=1&sni=www.cloudflare.com#🇳🇱 NL HY2
+hysteria2://123456789StrongPass@144.31.224.14:443?insecure=1&sni=eh.vk.com&type=tcp&upmbps=10&downmbps=50#🇳🇱 NL HY2
