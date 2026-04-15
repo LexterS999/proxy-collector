@@ -1620,3 +1620,42 @@
 2026-04-15 07:25:54,578 [INFO] Статистика: 23 записей → stats.json
 2026-04-15 07:25:54,579 [INFO] Dashboard → dashboard.html
 2026-04-15 07:25:54,579 [INFO] ════ Готово за 21.2с ════
+2026-04-15 13:16:52,977 [INFO] ════ Proxy Collector v7 запущен ════
+2026-04-15 13:16:52,978 [INFO] Источников: 8 из source.txt
+2026-04-15 13:16:52,978 [INFO] [2/8] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt
+2026-04-15 13:16:52,982 [INFO] [6/8] https://scarlet-devil.vercel.app/sub1
+2026-04-15 13:16:52,982 [INFO] [8/8] https://scarlet-devil.vercel.app/sub3
+2026-04-15 13:16:52,983 [INFO] [4/8] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt
+2026-04-15 13:16:52,983 [INFO] [3/8] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt
+2026-04-15 13:16:52,983 [INFO] [1/8] https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt
+2026-04-15 13:16:52,983 [INFO] [7/8] https://scarlet-devil.vercel.app/sub2
+2026-04-15 13:16:52,984 [INFO] [5/8] https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt
+2026-04-15 13:16:53,014 [INFO]   ↳ Найдено: 70
+2026-04-15 13:16:53,097 [INFO]   ↳ Найдено: 25
+2026-04-15 13:16:53,136 [INFO]   ↳ Найдено: 4341
+2026-04-15 13:16:53,137 [INFO]   ↳ Найдено: 91
+2026-04-15 13:16:53,152 [INFO]   ↳ Найдено: 1540
+2026-04-15 13:16:53,447 [INFO]   ↳ Найдено: 0
+2026-04-15 13:16:53,475 [INFO]   ↳ Найдено: 152
+2026-04-15 13:16:53,494 [INFO]   ↳ Найдено: 784
+2026-04-15 13:16:53,495 [INFO] Загрузка: 0.5с | извлечено 7003 (raw)
+2026-04-15 13:16:53,581 [INFO] После нормализации: 6993
+2026-04-15 13:16:53,869 [INFO] Dedup A: 6993 → 5051 (удалено 1942, полный отпечаток)
+2026-04-15 13:16:53,869 [INFO] Проверка живости: 5051 прокси (TCP 3s, 500 parallel)...
+2026-04-15 13:17:07,404 [INFO] Живых: 3046/5051 (60%) за 13.5с
+2026-04-15 13:17:07,407 [INFO] Живых (до Dedup B): 3046/5051 за 13.5с
+2026-04-15 13:17:07,455 [INFO] Dedup B: 3046 → 2260 (удалено 786, host+port+credential)
+2026-04-15 13:17:07,509 [INFO] Геолокация: 1623 хостов | кэш: 1411 hit | запросы: 212 новых
+2026-04-15 13:17:10,676 [INFO]   Geo: 3/3 батчей | определено 43/212
+2026-04-15 13:17:10,676 [INFO] Геолокация завершена: +43 новых записей, итого 11161 в кэше
+2026-04-15 13:17:10,677 [INFO] Геолокация: 3.2с (+43 новых в кэше)
+2026-04-15 13:17:10,688 [INFO] Geo cache: 11161 записей → geo_cache.json
+2026-04-15 13:17:10,781 [INFO] Записан result.txt: 2260 прокси
+2026-04-15 13:17:10,796 [INFO]   results/hy2.txt: 2
+2026-04-15 13:17:10,796 [INFO]   results/ss.txt: 221
+2026-04-15 13:17:10,797 [INFO]   results/trojan.txt: 25
+2026-04-15 13:17:10,799 [INFO]   results/vless.txt: 1992
+2026-04-15 13:17:10,799 [INFO]   results/vmess.txt: 20
+2026-04-15 13:17:10,834 [INFO] Статистика: 24 записей → stats.json
+2026-04-15 13:17:10,835 [INFO] Dashboard → dashboard.html
+2026-04-15 13:17:10,835 [INFO] ════ Готово за 17.9с ════
