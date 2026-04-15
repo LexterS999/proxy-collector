@@ -1,8 +1,6 @@
 # ═══════════════════════════════════════════════════════════
-#  HY2 — 3 прокси
+#  SSR — 1 прокси
 #  Обновлено: 2026-04-15 04:55 UTC
-#  Прокси  : 3
+#  Прокси  : 1
 # ═══════════════════════════════════════════════════════════
-hysteria2://dongtaiwang.com@163.172.113.118:40022?insecure=1&mport=41000-42000&sni=www.microsoft.com#🇫🇷 FR HY2
-hysteria2://123456789StrongPass@144.31.224.14:443?insecure=1&sni=eh.vk.com&type=tcp&allowInsecure=1&upmbps=10&downmbps=50#🇳🇱 NL HY2
-hysteria2://KevinZakaria…#🌐 ?? HY2
+ssr://的格式

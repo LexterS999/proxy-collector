@@ -2645,5 +2645,214 @@
         "ok": true
       }
     ]
+  },
+  {
+    "ts": "2026-04-15T04:55:45Z",
+    "date": "2026-04-15",
+    "sources_total": 30,
+    "sources_ok": 30,
+    "raw": 56921,
+    "unique": 34680,
+    "alive": 11527,
+    "alive_pct": 33.2,
+    "dup_a": 21879,
+    "dup_b": 5470,
+    "geo_covered": 10230,
+    "dc_count": 938,
+    "avg_latency_ms": 227.3,
+    "protocols": {
+      "VLESS": 9901,
+      "VMESS": 249,
+      "TROJAN": 619,
+      "SS": 754,
+      "SSR": 1,
+      "HY2": 3
+    },
+    "countries": {
+      "CA": 4545,
+      "??": 1297,
+      "US": 1205,
+      "RU": 1013,
+      "DE": 474,
+      "NL": 437,
+      "GB": 285,
+      "FR": 222,
+      "SE": 193,
+      "CR": 192,
+      "IR": 176,
+      "HU": 154,
+      "JP": 121,
+      "FI": 112,
+      "HK": 103,
+      "SG": 95,
+      "LV": 70,
+      "KZ": 50,
+      "PL": 49,
+      "KR": 43
+    },
+    "top_isps": {
+      "Cloudflare, Inc.": 295,
+      "JSC \"TIMEWEB\"": 210,
+      "Yandex.Cloud LLC": 133,
+      "Cloudflare London, LLC": 104,
+      "Yandex enterprise network": 52,
+      "OVH SAS": 51,
+      "JSC Selectel": 47,
+      "WorkTitans B.V.": 45,
+      "node": 41,
+      "LLC VK": 40
+    },
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
+        "found": 125,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/22.txt",
+        "found": 174,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/8.txt",
+        "found": 137,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/1.txt",
+        "found": 2635,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/4.txt",
+        "found": 69,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/9.txt",
+        "found": 318,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/14.txt",
+        "found": 822,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
+        "found": 27,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/13.txt",
+        "found": 100,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/7.txt",
+        "found": 303,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/11.txt",
+        "found": 649,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/20.txt",
+        "found": 2015,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/15.txt",
+        "found": 356,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+        "found": 699,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt",
+        "found": 1826,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/21.txt",
+        "found": 1677,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/6.txt",
+        "found": 139,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/18.txt",
+        "found": 504,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/10.txt",
+        "found": 3683,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/12.txt",
+        "found": 3502,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/19.txt",
+        "found": 1710,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/16.txt",
+        "found": 8,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt",
+        "found": 4339,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub1",
+        "found": 227,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/2.txt",
+        "found": 19115,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/5.txt",
+        "found": 920,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/17.txt",
+        "found": 385,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub2",
+        "found": 944,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/3.txt",
+        "found": 9513,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub3",
+        "found": 0,
+        "ok": true
+      }
+    ]
   }
 ]

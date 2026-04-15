@@ -1496,3 +1496,88 @@
 2026-04-15 02:05:36,445 [INFO] Статистика: 21 записей → stats.json
 2026-04-15 02:05:36,446 [INFO] Dashboard → dashboard.html
 2026-04-15 02:05:36,446 [INFO] ════ Готово за 21.1с ════
+2026-04-15 04:53:39,717 [INFO] ════ Proxy Collector v7 запущен ════
+2026-04-15 04:53:39,717 [INFO] Источников: 30 из source.txt
+2026-04-15 04:53:39,718 [INFO] [18/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/13.txt
+2026-04-15 04:53:39,725 [INFO] [12/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/7.txt
+2026-04-15 04:53:39,726 [INFO] [6/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/1.txt
+2026-04-15 04:53:39,726 [INFO] [25/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/20.txt
+2026-04-15 04:53:39,726 [INFO] [19/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/14.txt
+2026-04-15 04:53:39,726 [INFO] [13/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/8.txt
+2026-04-15 04:53:39,726 [INFO] [7/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/2.txt
+2026-04-15 04:53:39,726 [INFO] [2/30] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt
+2026-04-15 04:53:39,727 [INFO] [26/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/21.txt
+2026-04-15 04:53:39,727 [INFO] [20/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/15.txt
+2026-04-15 04:53:39,727 [INFO] [14/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/9.txt
+2026-04-15 04:53:39,727 [INFO] [8/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/3.txt
+2026-04-15 04:53:39,727 [INFO] [4/30] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt
+2026-04-15 04:53:39,727 [INFO] [27/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/22.txt
+2026-04-15 04:53:39,727 [INFO] [21/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/16.txt
+2026-04-15 04:53:39,728 [INFO] [15/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/10.txt
+2026-04-15 04:53:39,728 [INFO] [9/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/4.txt
+2026-04-15 04:53:39,728 [INFO] [28/30] https://scarlet-devil.vercel.app/sub1
+2026-04-15 04:53:39,729 [INFO] [22/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/17.txt
+2026-04-15 04:53:39,729 [INFO] [16/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/11.txt
+2026-04-15 04:53:39,771 [INFO]   ↳ Найдено: 125
+2026-04-15 04:53:39,771 [INFO] [10/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/5.txt
+2026-04-15 04:53:39,778 [INFO]   ↳ Найдено: 174
+2026-04-15 04:53:39,778 [INFO] [5/30] https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt
+2026-04-15 04:53:39,786 [INFO]   ↳ Найдено: 137
+2026-04-15 04:53:39,786 [INFO] [29/30] https://scarlet-devil.vercel.app/sub2
+2026-04-15 04:53:39,801 [INFO]   ↳ Найдено: 2635
+2026-04-15 04:53:39,802 [INFO] [23/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/18.txt
+2026-04-15 04:53:39,803 [INFO]   ↳ Найдено: 69
+2026-04-15 04:53:39,805 [INFO] [17/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/12.txt
+2026-04-15 04:53:39,808 [INFO]   ↳ Найдено: 318
+2026-04-15 04:53:39,813 [INFO]   ↳ Найдено: 822
+2026-04-15 04:53:39,813 [INFO]   ↳ Найдено: 27
+2026-04-15 04:53:39,813 [INFO]   ↳ Найдено: 100
+2026-04-15 04:53:39,818 [INFO]   ↳ Найдено: 303
+2026-04-15 04:53:39,818 [INFO] [11/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/6.txt
+2026-04-15 04:53:39,819 [INFO] [3/30] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt
+2026-04-15 04:53:39,819 [INFO] [1/30] https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt
+2026-04-15 04:53:39,819 [INFO] [30/30] https://scarlet-devil.vercel.app/sub3
+2026-04-15 04:53:39,820 [INFO] [24/30] https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/19.txt
+2026-04-15 04:53:39,822 [INFO]   ↳ Найдено: 649
+2026-04-15 04:53:39,834 [INFO]   ↳ Найдено: 2015
+2026-04-15 04:53:39,835 [INFO]   ↳ Найдено: 356
+2026-04-15 04:53:39,839 [INFO]   ↳ Найдено: 699
+2026-04-15 04:53:39,848 [INFO]   ↳ Найдено: 1826
+2026-04-15 04:53:39,856 [INFO]   ↳ Найдено: 1677
+2026-04-15 04:53:39,860 [INFO]   ↳ Найдено: 139
+2026-04-15 04:53:39,869 [INFO]   ↳ Найдено: 504
+2026-04-15 04:53:39,925 [INFO]   ↳ Найдено: 3683
+2026-04-15 04:53:39,941 [INFO]   ↳ Найдено: 3502
+2026-04-15 04:53:39,950 [INFO]   ↳ Найдено: 1710
+2026-04-15 04:53:39,954 [INFO]   ↳ Найдено: 8
+2026-04-15 04:53:39,975 [INFO]   ↳ Найдено: 4339
+2026-04-15 04:53:39,979 [INFO]   ↳ Найдено: 227
+2026-04-15 04:53:40,060 [INFO]   ↳ Найдено: 19115
+2026-04-15 04:53:40,069 [INFO]   ↳ Найдено: 920
+2026-04-15 04:53:40,072 [INFO]   ↳ Найдено: 385
+2026-04-15 04:53:40,077 [INFO]   ↳ Найдено: 944
+2026-04-15 04:53:40,128 [INFO]   ↳ Найдено: 9513
+2026-04-15 04:53:40,134 [INFO]   ↳ Найдено: 0
+2026-04-15 04:53:40,137 [INFO] Загрузка: 0.4с | извлечено 56921 (raw)
+2026-04-15 04:53:40,782 [INFO] После нормализации: 56559
+2026-04-15 04:53:42,658 [INFO] Dedup A: 56559 → 34680 (удалено 21879, полный отпечаток)
+2026-04-15 04:53:42,658 [INFO] Проверка живости: 34680 прокси (TCP 3s, 500 parallel)...
+2026-04-15 04:55:28,693 [INFO] Живых: 16997/34680 (49%) за 106.0с
+2026-04-15 04:55:28,704 [INFO] Живых (до Dedup B): 16997/34680 за 106.0с
+2026-04-15 04:55:28,983 [INFO] Dedup B: 16997 → 11527 (удалено 5470, host+port+credential)
+2026-04-15 04:55:29,201 [INFO] Геолокация: 7678 хостов | кэш: 6602 hit | запросы: 1076 новых
+2026-04-15 04:55:43,440 [INFO]   Geo: 10/11 батчей | определено 373/1076
+2026-04-15 04:55:45,016 [INFO]   Geo: 11/11 батчей | определено 385/1076
+2026-04-15 04:55:45,017 [INFO] Геолокация завершена: +385 новых записей, итого 11103 в кэше
+2026-04-15 04:55:45,017 [INFO] Геолокация: 15.9с (+384 новых в кэше)
+2026-04-15 04:55:45,029 [INFO] Geo cache: 11103 записей → geo_cache.json
+2026-04-15 04:55:45,498 [INFO] Записан result.txt: 11527 прокси
+2026-04-15 04:55:45,574 [INFO]   results/hy2.txt: 3
+2026-04-15 04:55:45,574 [INFO]   results/ss.txt: 754
+2026-04-15 04:55:45,575 [INFO]   results/ssr.txt: 1
+2026-04-15 04:55:45,575 [INFO]   results/trojan.txt: 619
+2026-04-15 04:55:45,584 [INFO]   results/vless.txt: 9901
+2026-04-15 04:55:45,585 [INFO]   results/vmess.txt: 249
+2026-04-15 04:55:45,741 [INFO] Статистика: 22 записей → stats.json
+2026-04-15 04:55:45,742 [INFO] Dashboard → dashboard.html
+2026-04-15 04:55:45,742 [INFO] ════ Готово за 126.0с ════
