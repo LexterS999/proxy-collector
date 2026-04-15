@@ -260,7 +260,7 @@ python collector.py [-h] [-s SOURCE] [-o OUTPUT] [-r RESULTS] [-v]
 
 ```yaml
 schedule:
-  - cron: "0 6 * * *"    # ежедневно в 06:00 UTC
+  - cron: "0 */6 * * *"   # каждые 6 часов
 ```
 
 Изменить время: откройте `.github/workflows/collect.yml` → `cron`.
