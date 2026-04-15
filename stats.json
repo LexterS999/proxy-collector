@@ -3050,5 +3050,103 @@
         "ok": true
       }
     ]
+  },
+  {
+    "ts": "2026-04-15T19:11:08Z",
+    "date": "2026-04-15",
+    "sources_total": 8,
+    "sources_ok": 8,
+    "raw": 7925,
+    "unique": 5562,
+    "alive": 2252,
+    "alive_pct": 40.5,
+    "dup_a": 2363,
+    "dup_b": 1141,
+    "geo_covered": 1983,
+    "dc_count": 283,
+    "avg_latency_ms": 250.3,
+    "protocols": {
+      "VLESS": 1983,
+      "VMESS": 20,
+      "TROJAN": 29,
+      "SS": 218,
+      "HY2": 2
+    },
+    "countries": {
+      "RU": 579,
+      "??": 269,
+      "NL": 219,
+      "DE": 171,
+      "US": 157,
+      "CA": 152,
+      "FR": 108,
+      "GB": 93,
+      "HU": 76,
+      "LV": 50,
+      "HK": 36,
+      "FI": 30,
+      "JP": 21,
+      "EE": 18,
+      "PL": 18,
+      "AT": 17,
+      "SG": 15,
+      "SE": 13,
+      "TW": 13,
+      "IN": 12
+    },
+    "top_isps": {
+      "LLC VK": 78,
+      "OVH SAS": 52,
+      "JSC \"TIMEWEB\"": 48,
+      "Yandex.Cloud LLC": 48,
+      "Cloudflare, Inc.": 37,
+      "Yandex enterprise network": 35,
+      "WorkTitans B.V.": 34,
+      "JSC Selectel": 29,
+      "Alibaba (US) Technology Co., Ltd.": 17,
+      "Cloudflare London, LLC": 14
+    },
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
+        "found": 84,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
+        "found": 7,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+        "found": 629,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt",
+        "found": 4405,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt",
+        "found": 1983,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub3",
+        "found": 0,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub1",
+        "found": 164,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub2",
+        "found": 653,
+        "ok": true
+      }
+    ]
   }
 ]
