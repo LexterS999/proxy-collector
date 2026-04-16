@@ -3148,5 +3148,103 @@
         "ok": true
       }
     ]
+  },
+  {
+    "ts": "2026-04-16T02:13:27Z",
+    "date": "2026-04-16",
+    "sources_total": 8,
+    "sources_ok": 8,
+    "raw": 8561,
+    "unique": 6196,
+    "alive": 2364,
+    "alive_pct": 38.2,
+    "dup_a": 2365,
+    "dup_b": 1070,
+    "geo_covered": 2086,
+    "dc_count": 350,
+    "avg_latency_ms": 262.4,
+    "protocols": {
+      "VLESS": 2040,
+      "VMESS": 37,
+      "TROJAN": 38,
+      "SS": 247,
+      "HY2": 2
+    },
+    "countries": {
+      "RU": 643,
+      "??": 278,
+      "NL": 225,
+      "DE": 175,
+      "US": 163,
+      "CA": 153,
+      "FR": 107,
+      "GB": 89,
+      "HU": 86,
+      "LV": 52,
+      "FI": 30,
+      "JP": 26,
+      "HK": 24,
+      "PL": 20,
+      "AT": 18,
+      "EE": 17,
+      "SG": 16,
+      "SE": 15,
+      "IN": 13,
+      "AL": 12
+    },
+    "top_isps": {
+      "JSC \"TIMEWEB\"": 104,
+      "LLC VK": 72,
+      "OVH SAS": 52,
+      "Yandex.Cloud LLC": 51,
+      "JSC Selectel": 39,
+      "Cloudflare, Inc.": 35,
+      "WorkTitans B.V.": 34,
+      "Yandex enterprise network": 34,
+      "Cloudflare London, LLC": 14,
+      "Servers Tech Fzco": 14
+    },
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
+        "found": 26,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+        "found": 1165,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
+        "found": 115,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt",
+        "found": 1983,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt",
+        "found": 4400,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub2",
+        "found": 708,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub1",
+        "found": 164,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub3",
+        "found": 0,
+        "ok": true
+      }
+    ]
   }
 ]
