@@ -1,48 +1,42 @@
 # ═══════════════════════════════════════════════════════════
-#  TROJAN — 43 прокси
-#  Обновлено: 2026-04-17 13:10 UTC
-#  Прокси  : 43
+#  TROJAN — 37 прокси
+#  Обновлено: 2026-04-17 18:55 UTC
+#  Прокси  : 37
 # ═══════════════════════════════════════════════════════════
 trojan://MeaDiUmPlkWbZJ2BON8tz@78.159.131.12:28259?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=ads.x5.ru#🇦🇱 AL TROJAN
-trojan://humanity@104.17.150.76:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2Fassignment&host=www.calmloud.com&sni=www.calmloud.com&fp=chrome&alpn=http/1.1#🇨🇦 CA TROJAN
-trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@104.18.12.149:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2F&host=sni.111000.dynv6.net&sni=sni.111000.dynv6.net&alpn=http/1.1#🇨🇦 CA TROJAN
-trojan://bpb-trojan@104.21.75.193:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2Ftr&host=mashdt.pages.dev&sni=mashdt.pages.dev&alpn=h3#🇨🇦 CA TROJAN
 trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@104.17.101.139:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%3Fproxyip%3Dip.111000.de5.net%3A443&host=sni.111000.dynv6.net&sni=sni.111000.dynv6.net&alpn=http/1.1#🇨🇦 CA TROJAN
+trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@104.17.185.207:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2F%3Fproxyip%3Dip.111000.de5.net%3A443&host=sni.111000.dynv6.net&sni=sni.111000.dynv6.net&alpn=http/1.1#🇨🇦 CA TROJAN
+trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@104.18.12.149:8443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2F&host=sni.111000.dynv6.net&sni=sni.111000.dynv6.net&alpn=http/1.1#🇨🇦 CA TROJAN
 trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@104.16.80.73:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2F&host=sni.111000.dynv6.net&sni=sni.111000.dynv6.net&alpn=http/1.1#🇨🇦 CA TROJAN
-trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.20:10369?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=fra35.chasem2026sud.com#🇩🇪 DE TROJAN
-trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.121:10369?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=fra33.chasem2026sud.com#🇩🇪 DE TROJAN
-trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.237:10369?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=fra5.chasem2026sud.com#🇩🇪 DE TROJAN
+trojan://humanity@104.17.150.76:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2Fassignment&host=www.calmloud.com&sni=www.calmloud.com&fp=chrome&alpn=http/1.1#🇨🇦 CA TROJAN
+trojan://bpb-trojan@104.21.75.193:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2Ftr&host=mashdt.pages.dev&sni=mashdt.pages.dev&alpn=h3#🇨🇦 CA TROJAN
 trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.199:10369?allowInsecure=1&insecure=1&type=tcp&security=tls#🇩🇪 DE TROJAN
+trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.20:10369?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=fra35.chasem2026sud.com#🇩🇪 DE TROJAN
 trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.105:10369?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=fra32.chasem2026sud.com#🇩🇪 DE TROJAN
 trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.3:10369?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=fra34.chasem2026sud.com#🇩🇪 DE TROJAN
+trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.237:10369?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=fra5.chasem2026sud.com#🇩🇪 DE TROJAN
+trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.121:10369?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=fra33.chasem2026sud.com#🇩🇪 DE TROJAN
 trojan://BxceQaOe@58.152.53.22:443?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=t.me%2Fripaojiedian#🇭🇰 HK TROJAN
+trojan://868ecdaf6aed618ec98cf78585672b2b@160.16.132.38:3057?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=www.nintendogames.net#🇯🇵 JP TROJAN
+trojan://868ecdaf6aed618ec98cf78585672b2b@160.16.132.38:4019?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=www.nintendogames.net#🇯🇵 JP TROJAN
+trojan://868ecdaf6aed618ec98cf78585672b2b@160.16.85.33:4380?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=www.nintendogames.net#🇯🇵 JP TROJAN
 trojan://868ecdaf6aed618ec98cf78585672b2b@160.16.132.38:4674?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=www.nintendogames.net#🇯🇵 JP TROJAN
 trojan://e136d465-0558-43b9-b50c-b1f45d4cb2c2@140.238.43.40:24534?allowInsecure=1&allow_insecure=0&insecure=1&type=tcp&security=tls&path=%2F&sni=jp2-8sb.6121999.dpdns.org#🇯🇵 JP TROJAN
-trojan://868ecdaf6aed618ec98cf78585672b2b@160.16.85.33:4380?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=www.nintendogames.net#🇯🇵 JP TROJAN
-trojan://868ecdaf6aed618ec98cf78585672b2b@160.16.132.38:3057?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=www.nintendogames.net#🇯🇵 JP TROJAN
+trojan://strong-secret-pass-777@103.231.73.181:4443?allowInsecure=1&insecure=1&type=tcp&security=tls#🇱🇻 LV TROJAN
 trojan://6eea921e-bfe7-4618-ab2c-5576bb984893@94.103.2.233:443?fp=chrome&pbk=AD5oeeDsLYOWS2HbDqHYV_MnhfsUzXKgvYL6Sueavy0&security=reality&sid=6d&sni=www.google.com#🇲🇩 MD TROJAN
 trojan://M08tvzYWtUEJNtbpHp@194.124.216.192:443?allowInsecure=1&insecure=1&type=tcp&security=tls#🇳🇱 NL TROJAN
 trojan://strong-secret-pass-777@94.131.105.125:4443?allowInsecure=1&insecure=1&type=tcp&security=tls#🇳🇱 NL TROJAN
 trojan://a5inYFE=JGV89+hjxIqgDp1tcWBd6@80.173.230.196:26279?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=io.ozone.ru&fp=chrome#🇳🇴 NO TROJAN
 trojan://fQmMJwOLMlqHednu2SVED8gi-+H-db9kbg@194.87.10.29:23357?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=sgp8.node-resource.click&fp=chrome#🇸🇬 SG TROJAN
-trojan://fQmMJwOLMlqHednu2SVED8gi-+H-db9kbg@192.124.176.50:23357?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=sgp7.node-resource.click&fp=chrome#🇸🇬 SG TROJAN
-trojan://fQmMJwOLMlqHednu2SVED8gi-+H-db9kbg@103.136.68.175:23357?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=www.node-resource.click&fp=chrome#🇸🇬 SG TROJAN
-trojan://fQmMJwOLMlqHednu2SVED8gi-+H-db9kbg@194.87.10.31:23357?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=sgp9.node-resource.click&fp=chrome#🇸🇬 SG TROJAN
+trojan://humanity@8.6.112.6:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2Fassignment&host=www.calmloud.com&sni=www.calmloud.com&alpn=http/1.1#🇺🇸 US TROJAN
 trojan://humanity@8.6.112.0:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2Fassignment&host=www.calmloud.com&sni=www.calmloud.com&fp=chrome&alpn=http/1.1#🇺🇸 US TROJAN
-trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@8.6.112.6:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2F%3Fproxyip%3Dip.111000.de5.net%3A443&host=sni.111000.dynv6.net&sni=sni.111000.dynv6.net&alpn=http/1.1#🇺🇸 US TROJAN
-trojan://humanity@8.6.112.6:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2Fassignment&host=www.calmloud.com&sni=www.calmloud.com&fp=chrome&alpn=http/1.1#🇺🇸 US TROJAN
 trojan://kkzh2prsyr2ik47as615@64.94.95.118:57142?allowInsecure=1&insecure=1&type=tcp&security=tls#🇺🇸 US TROJAN
-trojan://CH.bhf8hDm2xBeGwpKkZydLWz86K3OFH8q@91.149.239.220:10413?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=lax9.ws-listener.click#🇺🇸 US TROJAN
-trojan://CH.bhf8hDm2xBeGwpKkZydLWz86K3OFH8q@91.149.239.153:10413?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=lax8.ws-listener.click#🇺🇸 US TROJAN
-trojan://UNWA6USASAb6=uAAZeZMFd+2uKB4.d5KOm@166.88.197.60:26650?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=sea9.firewallcontract.click#🇺🇸 US TROJAN
-trojan://UNWA6USASAb6=uAAZeZMFd+2uKB4.d5KOm@166.88.197.189:26650?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=sea8.firewallcontract.click#🇺🇸 US TROJAN
-trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@bestcf.030101.xyz:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2F%3Fed%3D2560%26proxyip%3Dip.111000.de5.net%3A443&host=sni.111000.dynv6.net&sni=sni.111000.dynv6.net&alpn=http/1.1#🌐 ?? TROJAN
-trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@saas.sin.fan:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2F%3Fed%3D2560%26proxyip%3Dip.111000.de5.net%3A443&host=sni.111000.dynv6.net&sni=sni.111000.dynv6.net&alpn=http/1.1#🌐 ?? TROJAN
-trojan://humanity@sourceforge.net:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2Fassignment&host=www.calmloud.com&sni=www.calmloud.com&fp=chrome&alpn=http/1.1#🌐 ?? TROJAN
-trojan://M08tvzYWtUEJNtbpHp@nl-4.tr202512.com:443?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=nl-4.tr202512.com#🌐 ?? TROJAN
-trojan://jj59d0f73f5d6@ru-1.krugvpn.com:443?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=ru-1.krugvpn.com&fp=chrome&alpn=h2,http/1.1#🌐 ?? TROJAN
-trojan://e136d465-0558-43b9-b50c-b1f45d4cb2c2@jp2-8sb.6121999.dpdns.org:24534?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=jp2-8sb.6121999.dpdns.org#🌐 ?? TROJAN
-trojan://uThbm8eGmXZ7GKqnWy@nl-4.tr202507.com:443?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=nl-4.tr202507.com#🌐 ?? TROJAN
-trojan://M7v%w11Se*@tttyder.wsone.icu:443?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=tttyder.wsone.icu&fp=chrome#🌐 ?? TROJAN
-trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@sni.111000.dynv6.net:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2F&sni=sni.111000.dynv6.net&fp=chrome&alpn=http/1.1#🌐 ?? TROJAN
+trojan://CH.bhf8hDm2xBeGwpKkZydLWz86K3OFH8q@91.149.239.220:10413?sni=eh.vk.com&allowInsecure=1&insecure=1&type=tcp&security=tls#🇺🇸 US TROJAN
+trojan://CH.bhf8hDm2xBeGwpKkZydLWz86K3OFH8q@91.149.239.153:10413?sni=eh.vk.com&allowInsecure=1&insecure=1&type=tcp&security=tls#🇺🇸 US TROJAN
 trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@jp.111000.cc.cd:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%3Fproxyip%3Dip.111000.de5.net%3A443&host=sni.111000.dynv6.net&sni=sni.111000.dynv6.net&alpn=http/1.1#🌐 ?? TROJAN
+trojan://humanity@sourceforge.net:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2Fassignment&host=www.calmloud.com&sni=www.calmloud.com&fp=chrome&alpn=http/1.1#🌐 ?? TROJAN
+trojan://uThbm8eGmXZ7GKqnWy@nl-4.tr202507.com:443?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=nl-4.tr202507.com#🌐 ?? TROJAN
+trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@saas.sin.fan:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2F%3Fed%3D2560%26proxyip%3Dip.111000.de5.net%3A443&host=sni.111000.dynv6.net&sni=sni.111000.dynv6.net&alpn=http/1.1#🌐 ?? TROJAN
+trojan://e136d465-0558-43b9-b50c-b1f45d4cb2c2@jp2-8sb.6121999.dpdns.org:24534?allowInsecure=1&insecure=1&type=tcp&security=tls&sni=jp2-8sb.6121999.dpdns.org#🌐 ?? TROJAN
+trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@freeyx.cloudflare88.eu.org:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2F%3Fed%3D2560%26proxyip%3Dip.111000.de5.net%3A443&host=sni.111000.dynv6.net&sni=sni.111000.dynv6.net&alpn=http/1.1#🌐 ?? TROJAN
+trojan://6202b230-417c-4d8e-b624-0f71afa9c75d@sni.111000.dynv6.net:443?allowInsecure=1&insecure=1&type=ws&security=tls&path=%2F&sni=sni.111000.dynv6.net&fp=chrome&alpn=http/1.1#🌐 ?? TROJAN
