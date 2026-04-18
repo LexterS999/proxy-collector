@@ -1,11 +1,10 @@
 # ═══════════════════════════════════════════════════════════
-#  HY2 — 6 прокси
-#  Обновлено: 2026-04-18 06:06 UTC
-#  Прокси  : 6
+#  HY2 — 5 прокси
+#  Обновлено: 2026-04-18 07:02 UTC
+#  Прокси  : 5
 # ═══════════════════════════════════════════════════════════
 hy2://0f771058-7892-4d46-b77e-a69e811b9cbc@84.201.25.156:443?sni=hls-svod.itunes.apple.com#🇩🇪 DE HY2
 hy2://auth@65.109.178.92:443?sni=cdn.cloudflare.com#🇫🇮 FI HY2
-hy2://123456789StrongPass@144.31.224.14:443/?insecure=1&sni=www.cloudflare.com#🇳🇱 NL HY2
 hy2://0f771058-7892-4d46-b77e-a69e811b9cbc@89.124.73.31:443?sni=hls-svod.itunes.apple.com#🇳🇱 NL HY2
-hy2://rstnnl@nrealistic.nn-foto.ru:443?sni=nrealistic.nn-foto.ru&obfs=salamander&obfs-password=CvxXZnSth1bVJKGFP2cof4rI52ifHJ2W#🌐 ?? HY2
 hysteria2://dongtaiwang.com@163.172.113.118:40022?insecure=1&sni=www.microsoft.com#🇫🇷 FR HY2
+hysteria2://123456789StrongPass@144.31.224.14:443?insecure=1&sni=eh.vk.com&type=tcp&allowInsecure=1&upmbps=10&downmbps=50#🇳🇱 NL HY2
