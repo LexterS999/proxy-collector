@@ -2476,3 +2476,64 @@
 2026-04-19 07:14:28,870 [INFO] Статистика: 41 записей → stats.json
 2026-04-19 07:14:28,871 [INFO] Dashboard → dashboard.html
 2026-04-19 07:14:28,871 [INFO] ════ Готово за 49.8с ════
+2026-04-19 12:54:03,548 [INFO] ════ Proxy Collector v7 запущен ════
+2026-04-19 12:54:03,548 [INFO] Источников: 18 из source.txt
+2026-04-19 12:54:03,549 [INFO] [18/18] https://scarlet-devil.vercel.app/sub2
+2026-04-19 12:54:03,553 [INFO] [15/18] https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/non_ru.txt
+2026-04-19 12:54:03,553 [INFO] [2/18] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt
+2026-04-19 12:54:03,553 [INFO] [9/18] https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_BLACK.txt
+2026-04-19 12:54:03,553 [INFO] [6/18] https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/subscriptions/mix-base64.txt
+2026-04-19 12:54:03,554 [INFO] [12/18] https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_WHITE.txt
+2026-04-19 12:54:03,554 [INFO] [17/18] https://scarlet-devil.vercel.app/sub1
+2026-04-19 12:54:03,554 [INFO] [14/18] https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/top_600.txt
+2026-04-19 12:54:03,554 [INFO] [11/18] https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_BLACK.txt
+2026-04-19 12:54:03,554 [INFO] [8/18] https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/main/output/converted.txt
+2026-04-19 12:54:03,554 [INFO] [4/18] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt
+2026-04-19 12:54:03,554 [INFO] [3/18] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt
+2026-04-19 12:54:03,555 [INFO] [13/18] https://raw.githubusercontent.com/makriq-org/short-key-list/refs/heads/main/data/short-key-list.txt
+2026-04-19 12:54:03,555 [INFO] [1/18] https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt
+2026-04-19 12:54:03,555 [INFO] [7/18] https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt
+2026-04-19 12:54:03,555 [INFO] [16/18] https://scarlet-devil.vercel.app/sub
+2026-04-19 12:54:03,555 [INFO] [10/18] https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_WHITE.txt
+2026-04-19 12:54:03,555 [INFO] [5/18] https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt
+2026-04-19 12:54:03,585 [INFO]   ↳ Найдено: 132
+2026-04-19 12:54:03,587 [INFO]   ↳ Найдено: 25
+2026-04-19 12:54:03,592 [INFO]   ↳ Найдено: 70
+2026-04-19 12:54:03,602 [INFO]   ↳ Найдено: 0
+2026-04-19 12:54:03,602 [INFO]   ↳ Найдено: 0
+2026-04-19 12:54:03,630 [INFO]   ↳ Найдено: 3556
+2026-04-19 12:54:03,635 [INFO]   ↳ Найдено: 272
+2026-04-19 12:54:03,637 [INFO]   ↳ Найдено: 328
+2026-04-19 12:54:03,643 [INFO]   ↳ Найдено: 1131
+2026-04-19 12:54:03,644 [INFO]   ↳ Найдено: 177
+2026-04-19 12:54:03,658 [INFO]   ↳ Найдено: 2028
+2026-04-19 12:54:03,674 [INFO]   ↳ Найдено: 2324
+2026-04-19 12:54:03,699 [INFO]   ↳ Найдено: 4621
+2026-04-19 12:54:03,726 [INFO]   ↳ Найдено: 6597
+2026-04-19 12:54:03,912 [INFO]   ↳ Найдено: 8534
+2026-04-19 12:54:03,914 [INFO]   ↳ Найдено: 114
+2026-04-19 12:54:03,918 [INFO]   ↳ Найдено: 1008
+2026-04-19 12:54:04,015 [INFO]   ↳ Найдено: 894
+2026-04-19 12:54:04,017 [INFO] Загрузка: 0.5с | извлечено 31811 (raw)
+2026-04-19 12:54:04,396 [INFO] После нормализации: 31571
+2026-04-19 12:54:05,312 [INFO] Dedup A: 31571 → 15424 (удалено 16147, полный отпечаток)
+2026-04-19 12:54:05,312 [INFO] Проверка живости: 15424 прокси (TCP 3s, 500 parallel)...
+2026-04-19 12:54:45,376 [INFO] Живых: 8539/15424 (55%) за 40.1с
+2026-04-19 12:54:45,382 [INFO] Живых (до Dedup B): 8539/15424 за 40.1с
+2026-04-19 12:54:45,508 [INFO] Dedup B: 8539 → 5286 (удалено 3253, host+port+credential)
+2026-04-19 12:54:45,614 [INFO] Геолокация: 3578 хостов | кэш: 3228 hit | запросы: 350 новых
+2026-04-19 12:54:50,360 [INFO]   Geo: 4/4 батчей | определено 41/350
+2026-04-19 12:54:50,361 [INFO] Геолокация завершена: +41 новых записей, итого 12741 в кэше
+2026-04-19 12:54:50,361 [INFO] Геолокация: 4.8с (+40 новых в кэше)
+2026-04-19 12:54:50,375 [INFO] Geo cache: 12741 записей → geo_cache.json
+2026-04-19 12:54:50,595 [INFO] Записан result.txt: 5286 прокси
+2026-04-19 12:54:50,629 [INFO]   results/hy2.txt: 5
+2026-04-19 12:54:50,630 [INFO]   results/ss.txt: 541
+2026-04-19 12:54:50,630 [INFO]   results/ssr.txt: 10
+2026-04-19 12:54:50,630 [INFO]   results/trojan.txt: 292
+2026-04-19 12:54:50,630 [INFO]   results/tuic.txt: 1
+2026-04-19 12:54:50,633 [INFO]   results/vless.txt: 4320
+2026-04-19 12:54:50,633 [INFO]   results/vmess.txt: 117
+2026-04-19 12:54:50,710 [INFO] Статистика: 42 записей → stats.json
+2026-04-19 12:54:50,711 [INFO] Dashboard → dashboard.html
+2026-04-19 12:54:50,711 [INFO] ════ Готово за 47.2с ════
