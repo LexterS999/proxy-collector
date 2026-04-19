@@ -1,6 +1,6 @@
 # ═══════════════════════════════════════════════════════════
 #  TUIC — 1 прокси
-#  Обновлено: 2026-04-18 18:42 UTC
+#  Обновлено: 2026-04-19 02:14 UTC
 #  Прокси  : 1
 # ═══════════════════════════════════════════════════════════
 tuic://87bc1693-8860-41d7-acf4-e6edf49abbbb:crivAv10hAdr-fop4Lne@70.34.197.98:443?congestion_control=bbr&amp%3Budp_relay_mode=native&amp%3Balpn=h3%2Cspdy/3.1&amp%3Ballow_insecure=1#🇸🇪 SE TUIC
