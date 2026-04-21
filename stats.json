@@ -6130,5 +6130,155 @@
         "ok": true
       }
     ]
+  },
+  {
+    "ts": "2026-04-21T07:29:56Z",
+    "date": "2026-04-21",
+    "sources_total": 18,
+    "sources_ok": 18,
+    "raw": 30222,
+    "unique": 13631,
+    "alive": 4964,
+    "alive_pct": 36.4,
+    "dup_a": 16375,
+    "dup_b": 2898,
+    "geo_covered": 4386,
+    "dc_count": 1120,
+    "avg_latency_ms": 269.7,
+    "protocols": {
+      "VLESS": 3965,
+      "VMESS": 133,
+      "TROJAN": 319,
+      "SS": 523,
+      "SSR": 17,
+      "HY2": 6,
+      "TUIC": 1
+    },
+    "countries": {
+      "CA": 901,
+      "RU": 645,
+      "??": 578,
+      "US": 547,
+      "NL": 410,
+      "DE": 401,
+      "FR": 186,
+      "GB": 183,
+      "SE": 91,
+      "FI": 82,
+      "HU": 81,
+      "HK": 78,
+      "PL": 64,
+      "AT": 53,
+      "SG": 50,
+      "JP": 37,
+      "LV": 37,
+      "IR": 36,
+      "EE": 27,
+      "IN": 26
+    },
+    "top_isps": {
+      "Cloudflare, Inc.": 291,
+      "Cloudflare London, LLC": 169,
+      "JSC Selectel": 104,
+      "Aeza International LTD": 89,
+      "Yandex.Cloud LLC": 86,
+      "GoDaddy.com, LLC": 83,
+      "OVH SAS": 69,
+      "LLC VK": 52,
+      "JSC \"TIMEWEB\"": 48,
+      "node": 40
+    },
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
+        "found": 46,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+        "found": 166,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
+        "found": 192,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
+        "found": 3549,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/main/output/converted.txt",
+        "found": 765,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/non_ru.txt",
+        "found": 280,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_WHITE.txt",
+        "found": 1118,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt",
+        "found": 0,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_WHITE.txt",
+        "found": 1624,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/top_600.txt",
+        "found": 415,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/makriq-org/short-key-list/refs/heads/main/data/short-key-list.txt",
+        "found": 112,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_BLACK.txt",
+        "found": 5170,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_BLACK.txt",
+        "found": 1540,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt",
+        "found": 4663,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub1",
+        "found": 144,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub",
+        "found": 997,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub2",
+        "found": 853,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/subscriptions/mix-base64.txt",
+        "found": 8588,
+        "ok": true
+      }
+    ]
   }
 ]
