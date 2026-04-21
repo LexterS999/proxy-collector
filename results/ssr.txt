@@ -1,6 +1,6 @@
 # ═══════════════════════════════════════════════════════════
 #  SSR — 9 прокси
-#  Обновлено: 2026-04-21 13:17 UTC
+#  Обновлено: 2026-04-21 19:06 UTC
 #  Прокси  : 9
 # ═══════════════════════════════════════════════════════════
 ssr://NzkuMTI3LjIzMy4xNzA6OTg5Om9yaWdpbjphZXMtMjU2LWNmYjpwbGFpbjpaamhtTjJGRGVtTlFTMkp6Umpod013Lz9ncm91cD1VMU5TVUhKdmRtbGtaWEkmcmVtYXJrcz04Si1IcVBDZmg2WWdRMEVnVTFOUyZvYmZzcGFyYW09JnByb3RvcGFyYW09
