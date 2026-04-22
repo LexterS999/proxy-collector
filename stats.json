@@ -6880,5 +6880,155 @@
         "ok": true
       }
     ]
+  },
+  {
+    "ts": "2026-04-22T13:19:07Z",
+    "date": "2026-04-22",
+    "sources_total": 18,
+    "sources_ok": 18,
+    "raw": 31709,
+    "unique": 15227,
+    "alive": 4938,
+    "alive_pct": 32.4,
+    "dup_a": 16265,
+    "dup_b": 3063,
+    "geo_covered": 4474,
+    "dc_count": 1031,
+    "avg_latency_ms": 256.1,
+    "protocols": {
+      "VLESS": 3821,
+      "VMESS": 139,
+      "TROJAN": 412,
+      "SS": 544,
+      "SSR": 16,
+      "HY2": 5,
+      "TUIC": 1
+    },
+    "countries": {
+      "CA": 897,
+      "RU": 622,
+      "DE": 532,
+      "US": 511,
+      "??": 464,
+      "NL": 355,
+      "GB": 180,
+      "FR": 167,
+      "HU": 154,
+      "HK": 97,
+      "SE": 83,
+      "FI": 72,
+      "PL": 71,
+      "SG": 54,
+      "JP": 48,
+      "AT": 35,
+      "IR": 35,
+      "LV": 35,
+      "EE": 31,
+      "ES": 26
+    },
+    "top_isps": {
+      "Cloudflare, Inc.": 297,
+      "Yandex.Cloud LLC": 154,
+      "Cloudflare London, LLC": 127,
+      "OVH SAS": 83,
+      "Aeza International LTD": 74,
+      "JSC Selectel": 63,
+      "GoDaddy.com, LLC": 57,
+      "DigitalOcean, LLC": 50,
+      "LLC VK": 49,
+      "xorek.cloud International LTD": 47
+    },
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
+        "found": 69,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
+        "found": 8,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+        "found": 171,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
+        "found": 3716,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_WHITE.txt",
+        "found": 1591,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/main/output/converted.txt",
+        "found": 0,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/makriq-org/short-key-list/refs/heads/main/data/short-key-list.txt",
+        "found": 200,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/top_600.txt",
+        "found": 528,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_WHITE.txt",
+        "found": 1146,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt",
+        "found": 4706,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt",
+        "found": 0,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/non_ru.txt",
+        "found": 431,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_BLACK.txt",
+        "found": 3356,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_BLACK.txt",
+        "found": 5273,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub1",
+        "found": 131,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/subscriptions/mix-base64.txt",
+        "found": 8646,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub2",
+        "found": 803,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub",
+        "found": 934,
+        "ok": true
+      }
+    ]
   }
 ]
