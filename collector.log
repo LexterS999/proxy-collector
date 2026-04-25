@@ -3880,3 +3880,54 @@
 2026-04-25 02:03:54,197 [INFO] Статистика: 64 записей → stats.json
 2026-04-25 02:03:54,199 [INFO] Dashboard → dashboard.html
 2026-04-25 02:03:54,199 [INFO] ════ Готово за 97.0с ════
+2026-04-25 06:22:26,006 [INFO] ════ Proxy Collector v7 запущен ════
+2026-04-25 06:22:26,006 [INFO] Источников: 14 из source.txt
+2026-04-25 06:22:26,007 [INFO] [14/14] https://scarlet-devil.vercel.app/sub2
+2026-04-25 06:22:26,011 [INFO] [11/14] https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/non_ru.txt
+2026-04-25 06:22:26,011 [INFO] [8/14] https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_WHITE.txt
+2026-04-25 06:22:26,011 [INFO] [5/14] https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_BLACK.txt
+2026-04-25 06:22:26,012 [INFO] [12/14] https://scarlet-devil.vercel.app/sub
+2026-04-25 06:22:26,012 [INFO] [4/14] https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt
+2026-04-25 06:22:26,012 [INFO] [3/14] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt
+2026-04-25 06:22:26,012 [INFO] [13/14] https://scarlet-devil.vercel.app/sub1
+2026-04-25 06:22:26,012 [INFO] [1/14] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt
+2026-04-25 06:22:26,013 [INFO] [7/14] https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_BLACK.txt
+2026-04-25 06:22:26,013 [INFO] [10/14] https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/top_600.txt
+2026-04-25 06:22:26,013 [INFO] [2/14] https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt
+2026-04-25 06:22:26,014 [INFO] [9/14] https://raw.githubusercontent.com/makriq-org/short-key-list/refs/heads/main/data/short-key-list.txt
+2026-04-25 06:22:26,014 [INFO] [6/14] https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_WHITE.txt
+2026-04-25 06:22:26,056 [INFO]   ↳ Найдено: 122
+2026-04-25 06:22:26,083 [INFO]   ↳ Найдено: 1609
+2026-04-25 06:22:26,113 [INFO]   ↳ Найдено: 0
+2026-04-25 06:22:26,127 [INFO]   ↳ Найдено: 556
+2026-04-25 06:22:26,131 [INFO]   ↳ Найдено: 292
+2026-04-25 06:22:26,153 [INFO]   ↳ Найдено: 52
+2026-04-25 06:22:26,163 [INFO]   ↳ Найдено: 200
+2026-04-25 06:22:26,209 [INFO]   ↳ Найдено: 2205
+2026-04-25 06:22:26,212 [INFO]   ↳ Найдено: 437
+2026-04-25 06:22:26,273 [INFO]   ↳ Найдено: 3501
+2026-04-25 06:22:26,282 [INFO]   ↳ Найдено: 164
+2026-04-25 06:22:26,321 [INFO]   ↳ Найдено: 1085
+2026-04-25 06:22:26,355 [INFO]   ↳ Найдено: 921
+2026-04-25 06:22:26,471 [INFO]   ↳ Найдено: 18423
+2026-04-25 06:22:26,474 [INFO] Загрузка: 0.5с | извлечено 29567 (raw)
+2026-04-25 06:22:26,876 [INFO] После нормализации: 29510
+2026-04-25 06:22:27,885 [INFO] Dedup A: 29510 → 19390 (удалено 10120, полный отпечаток)
+2026-04-25 06:22:27,886 [INFO] Проверка живости: 19390 прокси (TCP 3s, 500 parallel)...
+2026-04-25 06:23:31,073 [INFO] Живых: 8054/19390 (42%) за 63.2с
+2026-04-25 06:23:31,079 [INFO] Живых (до Dedup B): 8054/19390 за 63.2с
+2026-04-25 06:23:31,200 [INFO] Dedup B: 8054 → 5422 (удалено 2632, host+port+credential)
+2026-04-25 06:23:31,322 [INFO] Геолокация: 3746 хостов | кэш: 3378 hit | запросы: 368 новых
+2026-04-25 06:23:36,079 [INFO]   Geo: 4/4 батчей | определено 29/368
+2026-04-25 06:23:36,080 [INFO] Геолокация завершена: +29 новых записей, итого 15590 в кэше
+2026-04-25 06:23:36,080 [INFO] Геолокация: 4.8с (+29 новых в кэше)
+2026-04-25 06:23:36,098 [INFO] Geo cache: 15590 записей → geo_cache.json
+2026-04-25 06:23:36,320 [INFO] Записан result.txt: 5422 прокси
+2026-04-25 06:23:36,356 [INFO]   results/hy2.txt: 2
+2026-04-25 06:23:36,357 [INFO]   results/ss.txt: 905
+2026-04-25 06:23:36,357 [INFO]   results/trojan.txt: 533
+2026-04-25 06:23:36,360 [INFO]   results/vless.txt: 3963
+2026-04-25 06:23:36,360 [INFO]   results/vmess.txt: 19
+2026-04-25 06:23:36,445 [INFO] Статистика: 65 записей → stats.json
+2026-04-25 06:23:36,447 [INFO] Dashboard → dashboard.html
+2026-04-25 06:23:36,447 [INFO] ════ Готово за 70.4с ════
