@@ -8380,5 +8380,155 @@
         "ok": true
       }
     ]
+  },
+  {
+    "ts": "2026-04-25T02:03:54Z",
+    "date": "2026-04-25",
+    "sources_total": 18,
+    "sources_ok": 18,
+    "raw": 47058,
+    "unique": 26132,
+    "alive": 7179,
+    "alive_pct": 27.5,
+    "dup_a": 20707,
+    "dup_b": 4028,
+    "geo_covered": 6313,
+    "dc_count": 1667,
+    "avg_latency_ms": 304.5,
+    "protocols": {
+      "VLESS": 5322,
+      "VMESS": 133,
+      "TROJAN": 650,
+      "SS": 1052,
+      "SSR": 16,
+      "HY2": 5,
+      "TUIC": 1
+    },
+    "countries": {
+      "CA": 1201,
+      "RU": 985,
+      "??": 866,
+      "DE": 793,
+      "US": 548,
+      "NL": 520,
+      "GB": 344,
+      "FR": 287,
+      "SE": 149,
+      "FI": 131,
+      "KR": 119,
+      "PL": 88,
+      "LV": 86,
+      "IR": 78,
+      "BZ": 76,
+      "HK": 73,
+      "KZ": 65,
+      "SG": 61,
+      "AT": 57,
+      "BE": 45
+    },
+    "top_isps": {
+      "Cloudflare, Inc.": 434,
+      "Cloudflare London, LLC": 299,
+      "Yandex.Cloud LLC": 211,
+      "DigitalOcean, LLC": 108,
+      "OVH SAS": 106,
+      "Korea Telecom": 96,
+      "PUSHPKT OU": 95,
+      "LLC VK": 94,
+      "JSC Selectel": 89,
+      "Aeza International LTD": 78
+    },
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt",
+        "found": 4748,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+        "found": 463,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
+        "found": 131,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Surfboardv2ray/Proxy-sorter/main/output/converted.txt",
+        "found": 0,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
+        "found": 4398,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt",
+        "found": 0,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
+        "found": 52,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_WHITE.txt",
+        "found": 1457,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_BLACK.txt",
+        "found": 2021,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/non_ru.txt",
+        "found": 437,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/makriq-org/short-key-list/refs/heads/main/data/short-key-list.txt",
+        "found": 200,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_WHITE.txt",
+        "found": 3518,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/top_600.txt",
+        "found": 556,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub2",
+        "found": 768,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub1",
+        "found": 160,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/subscriptions/mix-base64.txt",
+        "found": 8669,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub",
+        "found": 928,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_BLACK.txt",
+        "found": 18552,
+        "ok": true
+      }
+    ]
   }
 ]
