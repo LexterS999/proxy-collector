@@ -1,8 +1,6 @@
 # ═══════════════════════════════════════════════════════════
-#  HY2 — 3 прокси
-#  Обновлено: 2026-04-26 02:25 UTC
-#  Прокси  : 3
+#  HY2 — 1 прокси
+#  Обновлено: 2026-04-26 07:24 UTC
+#  Прокси  : 1
 # ═══════════════════════════════════════════════════════════
 hysteria2://dongtaiwang.com@163.172.113.118:40022?insecure=1&sni=www.microsoft.com#🇫🇷 FR HY2
-hysteria2://123456789StrongPass@144.31.224.14:443?insecure=1#🇳🇱 NL HY2
-hysteria2://48b36b6a-eaa6-4843-9231-0bb8b38b5da5@sg-hy2.onetaplink.app:443?insecure=1&sni=hy2-sg.onetaplink.app&obfs=salamander&obfs-password=OrT7yQQIMqcvKdet#🌐 ?? HY2
