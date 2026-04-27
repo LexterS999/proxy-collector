@@ -1,2 +1,3 @@
 # Proxy Collector v6 — зависимости
 aiohttp>=3.9.0
+singbox2proxy
