@@ -1,10 +1,7 @@
 # ═══════════════════════════════════════════════════════════
-#  HY2 — 5 прокси
-#  Обновлено: 2026-04-29 02:35 UTC
-#  Прокси  : 5
+#  HY2 — 2 прокси
+#  Обновлено: 2026-04-29 08:10 UTC
+#  Прокси  : 2
 # ═══════════════════════════════════════════════════════════
-hysteria2://hysteria_master_password@72.56.122.195:443?insecure=1&sni=www.bing.com#🇩🇪 DE HY2
+hysteria2://hysteria_master_password@72.56.122.195:443?insecure=1&sni=google.com#🇩🇪 DE HY2
 hysteria2://dongtaiwang.com@163.172.113.118:40022?Telegram=%40GozargahAzad%2C%40GozargahAzad%2C%40GozargahAzad%2C%40GozargahAzad%2C%40GozargahAzad%2C%40GozargahAzad%2C%40GozargahAzad&insecure=1&sni=www.microsoft.com#🇫🇷 FR HY2
-hysteria2://48b36b6a-eaa6-4843-9231-0bb8b38b5da5@usa-hy2.onetaplink.app:443?insecure=0&sni=hy2-usa.onetaplink.app&obfs=salamander&obfs-password=OrT7yQQIMqcvKdet#🌐 ?? HY2
-hysteria2://48b36b6a-eaa6-4843-9231-0bb8b38b5da5@jp-hy2.onetaplink.app:5443?insecure=1&sni=hy2-jp.onetaplink.app&obfs=salamander&obfs-password=CF7WJGiw6r1c8imX#🌐 ?? HY2
-hysteria2://48b36b6a-eaa6-4843-9231-0bb8b38b5da5@sg-hy2.onetaplink.app:443?insecure=1&sni=hy2-sg.onetaplink.app&obfs=salamander&obfs-password=OrT7yQQIMqcvKdet#🌐 ?? HY2
