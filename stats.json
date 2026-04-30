@@ -10631,5 +10631,98 @@
         "ok": true
       }
     ]
+  },
+  {
+    "ts": "2026-04-30T02:36:39Z",
+    "date": "2026-04-30",
+    "sources_total": 7,
+    "sources_ok": 7,
+    "raw": 28063,
+    "unique": 20048,
+    "alive": 6244,
+    "alive_pct": 31.1,
+    "dup_a": 7969,
+    "dup_b": 2855,
+    "geo_covered": 5595,
+    "dc_count": 1843,
+    "avg_latency_ms": 246.6,
+    "protocols": {
+      "VLESS": 4849,
+      "VMESS": 21,
+      "TROJAN": 365,
+      "SS": 1005,
+      "HY2": 4
+    },
+    "countries": {
+      "RU": 936,
+      "CA": 835,
+      "DE": 743,
+      "NL": 690,
+      "??": 649,
+      "US": 473,
+      "GB": 278,
+      "SE": 143,
+      "FI": 127,
+      "BE": 118,
+      "FR": 100,
+      "PL": 90,
+      "LV": 89,
+      "SG": 88,
+      "HK": 82,
+      "BZ": 76,
+      "KZ": 67,
+      "EE": 56,
+      "JP": 48,
+      "KR": 48
+    },
+    "top_isps": {
+      "Cloudflare, Inc.": 334,
+      "Cloudflare London, LLC": 315,
+      "Yandex.Cloud LLC": 299,
+      "netcup GmbH": 161,
+      "Servers Tech Fzco": 126,
+      "DigitalOcean, LLC": 118,
+      "VERIXI SA": 113,
+      "JSC Selectel": 86,
+      "Yandex enterprise network": 78,
+      "OVH SAS": 56
+    },
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt",
+        "found": 0,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_WHITE.txt",
+        "found": 3602,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_BLACK.txt",
+        "found": 2203,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_WHITE.txt",
+        "found": 2300,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_BLACK.txt",
+        "found": 18788,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub1",
+        "found": 304,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub2",
+        "found": 866,
+        "ok": true
+      }
+    ]
   }
 ]
