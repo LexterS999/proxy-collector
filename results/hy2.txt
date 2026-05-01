@@ -1,8 +1,8 @@
 # ═══════════════════════════════════════════════════════════
 #  HY2 — 3 прокси
-#  Обновлено: 2026-04-30 19:15 UTC
+#  Обновлено: 2026-05-01 02:42 UTC
 #  Прокси  : 3
 # ═══════════════════════════════════════════════════════════
+hysteria2://hysteria_master_password@72.56.122.195:443?insecure=1&sni=google.com#🇩🇪 DE HY2
 hysteria2://dongtaiwang.com@163.172.113.118:40022?insecure=1&sni=www.microsoft.com#🇫🇷 FR HY2
-hysteria2://f8af73ed-363a-4dfb-b99f-65bd8ad1a329@jpaws.ccwink.photos:52348?insecure=1&sni=sgdigital.ccwink.cc#🌐 ?? HY2
 hysteria2://f8af73ed-363a-4dfb-b99f-65bd8ad1a329@jpaws.ccwink.photos:6533?insecure=1&sni=jpdigital.ccwink.cc#🌐 ?? HY2
