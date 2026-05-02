@@ -1,10 +1,6 @@
 # ═══════════════════════════════════════════════════════════
-#  HY2 — 5 прокси
-#  Обновлено: 2026-05-02 02:25 UTC
-#  Прокси  : 5
+#  HY2 — 1 прокси
+#  Обновлено: 2026-05-02 07:27 UTC
+#  Прокси  : 1
 # ═══════════════════════════════════════════════════════════
 hysteria2://dongtaiwang.com@163.172.113.118:40022?insecure=1&sni=www.microsoft.com#🇫🇷 FR HY2
-hysteria2://123456789StrongPass@144.31.224.14:443?insecure=1#🇳🇱 NL HY2
-hysteria2://hy2_o3qkn50k%3AJHufrljCQ86KeMfvRZnqFXPJxKIky2Xi@lv2.cleanersaz.help:443?insecure=1&sni=washing.help#🌐 ?? HY2
-hysteria2://hy2_o3qkn50k%3AZMoiU0jihcJtepMQ5aBRhHjfP5BD379E@gb.cleanersaz.help:443?insecure=1&sni=gb.cleanersaz.help#🌐 ?? HY2
-hysteria2://hy2_o3qkn50k%3AZMoiU0jihcJtepMQ5aBRhHjfP5BD379E@gb2.cleanersaz.help:443?insecure=1&sni=gb2.cleanersaz.help#🌐 ?? HY2
