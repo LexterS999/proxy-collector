@@ -1,6 +1,6 @@
 # ═══════════════════════════════════════════════════════════
 #  HY2 — 1 прокси
-#  Обновлено: 2026-05-02 07:27 UTC
+#  Обновлено: 2026-05-02 13:02 UTC
 #  Прокси  : 1
 # ═══════════════════════════════════════════════════════════
-hysteria2://dongtaiwang.com@163.172.113.118:40022?insecure=1&sni=www.microsoft.com#🇫🇷 FR HY2
+hysteria2://dongtaiwang.com@163.172.113.118:40022?Telegram=%40GozargahAzad%2C%40GozargahAzad%2C%40GozargahAzad%2C%40GozargahAzad%2C%40GozargahAzad%2C%40GozargahAzad%2C%40GozargahAzad&insecure=1&sni=www.microsoft.com#🇫🇷 FR HY2
