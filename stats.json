@@ -1,108 +1,5 @@
 [
   {
-    "ts": "2026-04-08T07:42:08Z",
-    "date": "2026-04-08",
-    "sources_total": 9,
-    "sources_ok": 9,
-    "raw": 5068,
-    "unique": 4113,
-    "alive": 1913,
-    "alive_pct": 46.5,
-    "dup_a": 947,
-    "dup_b": 601,
-    "geo_covered": 1647,
-    "dc_count": 94,
-    "avg_latency_ms": 191.6,
-    "protocols": {
-      "VLESS": 1539,
-      "VMESS": 39,
-      "TROJAN": 38,
-      "SS": 296,
-      "HY2": 1
-    },
-    "countries": {
-      "RU": 422,
-      "??": 266,
-      "CA": 189,
-      "NL": 178,
-      "US": 157,
-      "DE": 154,
-      "FR": 68,
-      "GB": 63,
-      "FI": 32,
-      "HU": 29,
-      "SE": 27,
-      "JP": 26,
-      "LV": 20,
-      "AT": 19,
-      "SG": 18,
-      "PL": 17,
-      "TR": 16,
-      "IN": 15,
-      "HK": 13,
-      "KZ": 9
-    },
-    "top_isps": {
-      "LLC VK": 51,
-      "JSC \"TIMEWEB\"": 16,
-      "Cloudflare, Inc.": 15,
-      "Yandex enterprise network": 13,
-      "OVH SAS": 10,
-      "Yandex.Cloud LLC": 10,
-      "M247 Europe SRL": 7,
-      "MTS PJSC": 6,
-      "Alibaba (US) Technology Co., Ltd.": 6,
-      "Cloudflare London, LLC": 5
-    },
-    "sources": [
-      {
-        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
-        "found": 78,
-        "ok": true
-      },
-      {
-        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
-        "found": 66,
-        "ok": true
-      },
-      {
-        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-checked.txt",
-        "found": 61,
-        "ok": true
-      },
-      {
-        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
-        "found": 18,
-        "ok": true
-      },
-      {
-        "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS+All_RUS.txt",
-        "found": 49,
-        "ok": true
-      },
-      {
-        "url": "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt",
-        "found": 3808,
-        "ok": true
-      },
-      {
-        "url": "https://scarlet-devil.vercel.app/sub3",
-        "found": 0,
-        "ok": true
-      },
-      {
-        "url": "https://scarlet-devil.vercel.app/sub2",
-        "found": 806,
-        "ok": true
-      },
-      {
-        "url": "https://scarlet-devil.vercel.app/sub1",
-        "found": 182,
-        "ok": true
-      }
-    ]
-  },
-  {
     "ts": "2026-04-09T07:44:35Z",
     "date": "2026-04-09",
     "sources_total": 9,
@@ -10706,6 +10603,99 @@
       {
         "url": "https://scarlet-devil.vercel.app/sub2",
         "found": 916,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "ts": "2026-05-03T02:33:57Z",
+    "date": "2026-05-03",
+    "sources_total": 7,
+    "sources_ok": 7,
+    "raw": 30661,
+    "unique": 22769,
+    "alive": 8109,
+    "alive_pct": 35.6,
+    "dup_a": 7872,
+    "dup_b": 4860,
+    "geo_covered": 7491,
+    "dc_count": 3096,
+    "avg_latency_ms": 194.3,
+    "protocols": {
+      "VLESS": 3881,
+      "VMESS": 37,
+      "TROJAN": 3327,
+      "SS": 862,
+      "HY2": 2
+    },
+    "countries": {
+      "NL": 1667,
+      "RU": 1265,
+      "DE": 1234,
+      "??": 618,
+      "CA": 611,
+      "FI": 582,
+      "GB": 392,
+      "FR": 284,
+      "US": 282,
+      "SE": 180,
+      "PL": 137,
+      "LV": 96,
+      "KR": 60,
+      "SG": 59,
+      "HK": 55,
+      "EE": 49,
+      "AT": 47,
+      "KZ": 46,
+      "JP": 43,
+      "ES": 37
+    },
+    "top_isps": {
+      "DigitalOcean, LLC": 1217,
+      "CGI GLOBAL LIMITED": 535,
+      "Yandex.Cloud LLC": 283,
+      "Cloudflare, Inc.": 260,
+      "Servers Tech Fzco": 249,
+      "netcup GmbH": 166,
+      "Hetzner Online GmbH": 151,
+      "JSC Selectel": 140,
+      "Cloudflare London, LLC": 132,
+      "Aeza International LTD": 127
+    },
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/configs/url_work.txt",
+        "found": 0,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_WHITE.txt",
+        "found": 3024,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_WHITE.txt",
+        "found": 3802,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/RU_Best/ru_white_all_BLACK.txt",
+        "found": 1708,
+        "ok": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/kort0881/vpn-checker-backend/refs/heads/main/checked/My_Euro/my_euro_all_BLACK.txt",
+        "found": 21092,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub1",
+        "found": 178,
+        "ok": true
+      },
+      {
+        "url": "https://scarlet-devil.vercel.app/sub2",
+        "found": 857,
         "ok": true
       }
     ]
